@@ -1,0 +1,58 @@
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.exe.config
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.exe
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.pdb
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\DatabaseClasses.dll
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\ExcelDotNet.dll
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\DatabaseClasses.pdb
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\ExcelDotNet.pdb
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.csprojResolveAssemblyReference.cache
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.MainForm.resources
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.Properties.Resources.resources
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.csproj.GenerateResource.Cache
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.exe
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.pdb
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\Microsoft.Office.Interop.Excel.dll
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\office.dll
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\Microsoft.Vbe.Interop.dll
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\Microsoft.Office.Interop.Excel.xml
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\office.xml
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\DistanceFunctions.dll
+\\isad.isadroot.ex.ac.uk\uoe\User\Visual Studio 2012\Projects\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\DistanceFunctions.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.exe.config
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.exe.manifest
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.application
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.exe
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\DistanceFunctions.dll
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\EasyDatabase.dll
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\EasyExcel.dll
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\LocalSearch.dll
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\MRG.Controls.UI.dll
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\Statistics.dll
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\DistanceFunctions.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\EasyDatabase.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\EasyExcel.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\LocalSearch.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\Statistics.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.csprojResolveAssemblyReference.cache
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.AboutBox1.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.AllocationResultsPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.AnalysisOptionPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.ComparisonByChartPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.LocalityQuerySetupPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.MainForm.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.Properties.Resources.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.LocalityResultsPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.MeanDifferenceConfidenceIntervalPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.ResultsComparisonPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.UI.ResultsPanel.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.csproj.GenerateResource.Cache
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.TrustInfo.xml
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.exe.manifest
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.application
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.exe
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CustomGUI.dll
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CustomGUI.pdb
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.WaitForm.resources
+C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.Splash.resources
