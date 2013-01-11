@@ -1,4 +1,4 @@
-﻿namespace CommunityNurseTravelAnalyser
+﻿namespace HomeVisitTravelAnalyser
 {
     partial class AboutBox1
     {
@@ -71,7 +71,7 @@
             // 
             // logoPictureBox
             // 
-            this.logoPictureBox.Image = global::CommunityNurseTravelAnalyser.Properties.Resources.PenChordIcon;
+            this.logoPictureBox.Image = global::HomeVisitTravelAnalyser.Properties.Resources.PenChordIcon;
             this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
             this.logoPictureBox.Name = "logoPictureBox";
             this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Statistics.Descriptive;
 
 
-namespace CommunityNurseTravelAnalyser.Results
+namespace HomeVisitTravelAnalyser.Results
 {
     public class LocalityResult
     {

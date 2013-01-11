@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityNurseTravelAnalyser", "CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser.csproj", "{A2A16FD4-F922-4196-98A4-48833EEE723D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeVisitTravelAnalyser", "CommunityNurseTravelAnalyser\HomeVisitTravelAnalyser.csproj", "{A2A16FD4-F922-4196-98A4-48833EEE723D}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "CommunityNurseSetup", "CommunityNurseSetup\CommunityNurseSetup.isproj", "{3C7B7441-7285-4F6D-A7E7-158E11BA2E93}"
 EndProject

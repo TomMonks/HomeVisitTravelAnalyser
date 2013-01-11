@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using CommunityNurseTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Results;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
     public interface IAnalysisCommand
     {

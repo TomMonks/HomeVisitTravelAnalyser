@@ -17,12 +17,12 @@ using Statistics.Descriptive;
 using LocalSearch;
 using System.Diagnostics;
 
-using CommunityNurseTravelAnalyser.Results;
-using CommunityNurseTravelAnalyser.Query;
-using CommunityNurseTravelAnalyser.UI;
-using CommunityNurseTravelAnalyser.Analysis;
+using HomeVisitTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Query;
+using HomeVisitTravelAnalyser.UI;
+using HomeVisitTravelAnalyser.Analysis;
 
-namespace CommunityNurseTravelAnalyser
+namespace HomeVisitTravelAnalyser
 {
     public partial class MainForm : Form
     {

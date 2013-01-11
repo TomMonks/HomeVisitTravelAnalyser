@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CommunityNurseTravelAnalyser")]
+[assembly: AssemblyTitle("HomeVisitTravelAnalyser")]
 [assembly: AssemblyDescription("A modelling and analysis tool to support decision making about patient allocation to Community Nurse teams")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PenCHORD")]

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CommunityNurseTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Results;
 using Statistics.Descriptive;
 using Statistics.Comparisons.Parametric;
 using EasyExcel;
@@ -16,7 +16,7 @@ using EasyExcel.Format;
 
 using System.Reflection;
 
-namespace CommunityNurseTravelAnalyser.UI
+namespace HomeVisitTravelAnalyser.UI
 {
     public partial class ResultsPanel : UserControl
     {

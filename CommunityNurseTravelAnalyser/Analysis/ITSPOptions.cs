@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
 
     public enum BaseSetup

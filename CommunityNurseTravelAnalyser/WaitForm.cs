@@ -12,9 +12,9 @@ using MRG.Controls.UI;
 using System.IO;
 using LocalSearch;
 
-using CommunityNurseTravelAnalyser.UI;
+using HomeVisitTravelAnalyser.UI;
 
-namespace CommunityNurseTravelAnalyser
+namespace HomeVisitTravelAnalyser
 {
   
     public partial class WaitForm : Form

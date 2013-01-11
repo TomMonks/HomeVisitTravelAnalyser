@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-using CommunityNurseTravelAnalyser.Results;
-using CommunityNurseTravelAnalyser.Query;
+using HomeVisitTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Query;
 
 using EasyDatabase.MSAccess;
 using EasyDatabase.SQL;
@@ -15,7 +15,7 @@ using DistanceFunctions;
 
 using Statistics.Descriptive;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
     public class CentroidAnalysisMethod : IAnalysisCommand 
     {

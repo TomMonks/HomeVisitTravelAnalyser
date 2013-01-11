@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using CommunityNurseTravelAnalyser.Query;
+using HomeVisitTravelAnalyser.Query;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
     public class AnalysisMethodSetup
     {

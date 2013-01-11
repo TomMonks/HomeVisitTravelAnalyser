@@ -1,4 +1,4 @@
-﻿namespace CommunityNurseTravelAnalyser
+﻿namespace HomeVisitTravelAnalyser
 {
     partial class MainForm
     {
@@ -32,8 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new CustomGUI.ExtendedTabControl();
             this.tp_AnalysisOptions = new System.Windows.Forms.TabPage();
+            this.analysisOptionPanel1 = new HomeVisitTravelAnalyser.UI.AnalysisOptionPanel();
             this.tp_HomeConfig = new System.Windows.Forms.TabPage();
+            this.localityQuerySetupPanel1 = new HomeVisitTravelAnalyser.UI.LocalityQuerySetupPanel();
             this.tp_GPConfig = new System.Windows.Forms.TabPage();
+            this.localityQuerySetupPanel2 = new HomeVisitTravelAnalyser.UI.LocalityQuerySetupPanel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runAnalysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,15 +51,11 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.analysisOptionPanel1 = new CommunityNurseTravelAnalyser.UI.AnalysisOptionPanel();
-            this.localityQuerySetupPanel1 = new CommunityNurseTravelAnalyser.UI.LocalityQuerySetupPanel();
-            this.localityQuerySetupPanel2 = new CommunityNurseTravelAnalyser.UI.LocalityQuerySetupPanel();
             this.tabControl1.SuspendLayout();
             this.tp_AnalysisOptions.SuspendLayout();
             this.tp_HomeConfig.SuspendLayout();
@@ -90,6 +90,17 @@
             this.tp_AnalysisOptions.Text = "Analysis Options";
             this.tp_AnalysisOptions.UseVisualStyleBackColor = true;
             // 
+            // analysisOptionPanel1
+            // 
+            this.analysisOptionPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.analysisOptionPanel1.AutoScroll = true;
+            this.analysisOptionPanel1.Location = new System.Drawing.Point(8, 3);
+            this.analysisOptionPanel1.Name = "analysisOptionPanel1";
+            this.analysisOptionPanel1.Size = new System.Drawing.Size(1017, 507);
+            this.analysisOptionPanel1.TabIndex = 0;
+            // 
             // tp_HomeConfig
             // 
             this.tp_HomeConfig.Controls.Add(this.localityQuerySetupPanel1);
@@ -102,6 +113,18 @@
             this.tp_HomeConfig.Text = "Home Locality Settings";
             this.tp_HomeConfig.UseVisualStyleBackColor = true;
             // 
+            // localityQuerySetupPanel1
+            // 
+            this.localityQuerySetupPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.localityQuerySetupPanel1.AutoScroll = true;
+            this.localityQuerySetupPanel1.FieldMappings = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("localityQuerySetupPanel1.FieldMappings")));
+            this.localityQuerySetupPanel1.Location = new System.Drawing.Point(8, 6);
+            this.localityQuerySetupPanel1.Name = "localityQuerySetupPanel1";
+            this.localityQuerySetupPanel1.Size = new System.Drawing.Size(1014, 499);
+            this.localityQuerySetupPanel1.TabIndex = 1;
+            // 
             // tp_GPConfig
             // 
             this.tp_GPConfig.Controls.Add(this.localityQuerySetupPanel2);
@@ -113,6 +136,27 @@
             this.tp_GPConfig.TabIndex = 1;
             this.tp_GPConfig.Text = "GP Locality Settings";
             this.tp_GPConfig.UseVisualStyleBackColor = true;
+            // 
+            // localityQuerySetupPanel2
+            // 
+            this.localityQuerySetupPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.localityQuerySetupPanel2.AutoScroll = true;
+            this.localityQuerySetupPanel2.FieldMappings = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("localityQuerySetupPanel2.FieldMappings")));
+            this.localityQuerySetupPanel2.Location = new System.Drawing.Point(8, 6);
+            this.localityQuerySetupPanel2.Name = "localityQuerySetupPanel2";
+            this.localityQuerySetupPanel2.Size = new System.Drawing.Size(1014, 499);
+            this.localityQuerySetupPanel2.TabIndex = 1;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "sprocket_dark.png");
+            this.imageList1.Images.SetKeyName(1, "pin.png");
+            this.imageList1.Images.SetKeyName(2, "dialog_cancel.ico");
+            this.imageList1.Images.SetKeyName(3, "chart_bar.png");
             // 
             // menuStrip1
             // 
@@ -220,31 +264,10 @@
             this.toolStrip1.TabIndex = 16;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "sprocket_dark.png");
-            this.imageList1.Images.SetKeyName(1, "pin.png");
-            this.imageList1.Images.SetKeyName(2, "dialog_cancel.ico");
-            this.imageList1.Images.SetKeyName(3, "chart_bar.png");
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::CommunityNurseTravelAnalyser.Properties.Resources.play_green;
+            this.toolStripButton1.Image = global::HomeVisitTravelAnalyser.Properties.Resources.play_green;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
@@ -252,10 +275,15 @@
             this.toolStripButton1.ToolTipText = "Run analysis with selected options";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::CommunityNurseTravelAnalyser.Properties.Resources.dialog_cancel;
+            this.toolStripButton2.Image = global::HomeVisitTravelAnalyser.Properties.Resources.dialog_cancel;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
@@ -263,40 +291,12 @@
             this.toolStripButton2.ToolTipText = "Exit Community Nurse Travel Analyser";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // analysisOptionPanel1
+            // backgroundWorker1
             // 
-            this.analysisOptionPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.analysisOptionPanel1.AutoScroll = true;
-            this.analysisOptionPanel1.Location = new System.Drawing.Point(8, 3);
-            this.analysisOptionPanel1.Name = "analysisOptionPanel1";
-            this.analysisOptionPanel1.Size = new System.Drawing.Size(1017, 507);
-            this.analysisOptionPanel1.TabIndex = 0;
-            // 
-            // localityQuerySetupPanel1
-            // 
-            this.localityQuerySetupPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.localityQuerySetupPanel1.AutoScroll = true;
-            this.localityQuerySetupPanel1.FieldMappings = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("localityQuerySetupPanel1.FieldMappings")));
-            this.localityQuerySetupPanel1.Location = new System.Drawing.Point(8, 6);
-            this.localityQuerySetupPanel1.Name = "localityQuerySetupPanel1";
-            this.localityQuerySetupPanel1.Size = new System.Drawing.Size(1014, 499);
-            this.localityQuerySetupPanel1.TabIndex = 1;
-            // 
-            // localityQuerySetupPanel2
-            // 
-            this.localityQuerySetupPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.localityQuerySetupPanel2.AutoScroll = true;
-            this.localityQuerySetupPanel2.FieldMappings = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("localityQuerySetupPanel2.FieldMappings")));
-            this.localityQuerySetupPanel2.Location = new System.Drawing.Point(8, 6);
-            this.localityQuerySetupPanel2.Name = "localityQuerySetupPanel2";
-            this.localityQuerySetupPanel2.Size = new System.Drawing.Size(1014, 499);
-            this.localityQuerySetupPanel2.TabIndex = 1;
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // MainForm
             // 
@@ -308,7 +308,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Community Nurse Travel Analyser";
+            this.Text = "Home Visit Travel Analyser";
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tp_AnalysisOptions.ResumeLayout(false);
@@ -329,10 +329,10 @@
         private CustomGUI.ExtendedTabControl tabControl1;
         private System.Windows.Forms.TabPage tp_GPConfig;
         private System.Windows.Forms.TabPage tp_HomeConfig;
-        private CommunityNurseTravelAnalyser.UI.LocalityQuerySetupPanel localityQuerySetupPanel1;
-        private CommunityNurseTravelAnalyser.UI.LocalityQuerySetupPanel localityQuerySetupPanel2;
+        private HomeVisitTravelAnalyser.UI.LocalityQuerySetupPanel localityQuerySetupPanel1;
+        private HomeVisitTravelAnalyser.UI.LocalityQuerySetupPanel localityQuerySetupPanel2;
         private System.Windows.Forms.TabPage tp_AnalysisOptions;
-        private CommunityNurseTravelAnalyser.UI.AnalysisOptionPanel analysisOptionPanel1;
+        private HomeVisitTravelAnalyser.UI.AnalysisOptionPanel analysisOptionPanel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem runAnalysisToolStripMenuItem;

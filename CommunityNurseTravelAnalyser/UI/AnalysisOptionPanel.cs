@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CommunityNurseTravelAnalyser.Analysis;
+using HomeVisitTravelAnalyser.Analysis;
 
-namespace CommunityNurseTravelAnalyser.UI
+namespace HomeVisitTravelAnalyser.UI
 {
-    public partial class AnalysisOptionPanel : UserControl, CommunityNurseTravelAnalyser.Analysis.ITSPOptions
+    public partial class AnalysisOptionPanel : UserControl, HomeVisitTravelAnalyser.Analysis.ITSPOptions
     {
         protected const string OD_TEXT = "Ordinary decent swaps the position of one city with all other cities until it reaches the first improvement in the objective function. \n\nThe tour is then set to the improved solution and the search begins from the next city. \n\nStopping Criterion: a single pass reveals no further improvement";
         protected const string SD_TEXT = "Steepest decent swaps the position of one city with all other cities until it reaches an improvement in the objective function. This is then saved as a potential move. \n\nThe algorithm then continues swapping the selected city with all other cities noting and potential moves that improve the objective.  The best move is then selected. \n\nThe tour is then set to the improved solution and the search begins from the next city. \n\nStopping Criterion: a single pass reveals no further improvement";

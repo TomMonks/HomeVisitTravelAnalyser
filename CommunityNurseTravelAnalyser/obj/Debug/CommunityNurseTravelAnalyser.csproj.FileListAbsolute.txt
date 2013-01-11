@@ -56,3 +56,6 @@ C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CustomGUI
 C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CustomGUI.pdb
 C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.WaitForm.resources
 C:\CommunityNurseTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.Splash.resources
+\\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\bin\Debug\CommunityNurseTravelAnalyser.exe.config
+\\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.exe
+\\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\CommunityNurseTravelAnalyser.pdb

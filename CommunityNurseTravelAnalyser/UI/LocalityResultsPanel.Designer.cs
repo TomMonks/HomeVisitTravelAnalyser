@@ -1,4 +1,4 @@
-﻿namespace CommunityNurseTravelAnalyser.UI
+﻿namespace HomeVisitTravelAnalyser.UI
 {
     partial class LocalityResultsPanel
     {

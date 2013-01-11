@@ -11,10 +11,10 @@ using Statistics.Descriptive;
 using EasyDatabase.MSAccess;
 using EasyDatabase.SQL;
 
-using CommunityNurseTravelAnalyser.Query;
-using CommunityNurseTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Query;
+using HomeVisitTravelAnalyser.Results;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
     public class CentroidDailyAnalysisMethod : IAnalysisCommand 
     {

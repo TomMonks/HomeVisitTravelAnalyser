@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 
 
-namespace CommunityNurseTravelAnalyser.Query
+namespace HomeVisitTravelAnalyser.Query
 {
     public class VisitsByDayLINQQuery
     {

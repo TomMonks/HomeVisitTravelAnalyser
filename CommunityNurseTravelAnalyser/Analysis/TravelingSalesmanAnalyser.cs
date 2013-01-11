@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using System.Data;
 
 using LocalSearch;
-using CommunityNurseTravelAnalyser.Query;
+using HomeVisitTravelAnalyser.Query;
 using DistanceFunctions;
-using CommunityNurseTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Results;
 using Statistics.Descriptive;
 
 using EasyDatabase.MSAccess;
 using EasyDatabase.SQL;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
     public class TravelingSalesmanAnalyser : IAnalysisCommand
     {

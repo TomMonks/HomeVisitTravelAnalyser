@@ -1,4 +1,4 @@
-﻿namespace CommunityNurseTravelAnalyser.UI
+﻿namespace HomeVisitTravelAnalyser.UI
 {
     partial class ResultsComparisonPanel
     {
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.localityResultsPanel2 = new CommunityNurseTravelAnalyser.UI.LocalityResultsPanel();
-            this.localityResultsPanel1 = new CommunityNurseTravelAnalyser.UI.LocalityResultsPanel();
+            this.localityResultsPanel2 = new HomeVisitTravelAnalyser.UI.LocalityResultsPanel();
+            this.localityResultsPanel1 = new HomeVisitTravelAnalyser.UI.LocalityResultsPanel();
             this.SuspendLayout();
             // 
             // localityResultsPanel2

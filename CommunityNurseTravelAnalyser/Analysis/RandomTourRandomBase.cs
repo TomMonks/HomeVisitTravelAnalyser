@@ -7,7 +7,7 @@ using System.Data;
 
 using LocalSearch;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
     public class RandomTourRandomBase : IDataTableRowSampler
     {

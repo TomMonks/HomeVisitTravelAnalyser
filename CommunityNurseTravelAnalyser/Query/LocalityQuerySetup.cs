@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityNurseTravelAnalyser.Query
+namespace HomeVisitTravelAnalyser.Query
 {
     public interface ILocalityQuerySetup
     {

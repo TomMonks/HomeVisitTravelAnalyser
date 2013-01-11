@@ -10,9 +10,9 @@ using DistanceFunctions;
 using EasyDatabase.MSAccess;
 using EasyDatabase.SQL;
 
-using CommunityNurseTravelAnalyser.Query;
+using HomeVisitTravelAnalyser.Query;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
 
     /// <summary>

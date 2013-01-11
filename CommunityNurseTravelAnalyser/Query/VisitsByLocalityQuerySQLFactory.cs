@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using EasyDatabase.SQL;
 
-namespace CommunityNurseTravelAnalyser.Query
+namespace HomeVisitTravelAnalyser.Query
 {
     class VisitsByLocalityQuerySQLFactory : ISQLFactory 
     {

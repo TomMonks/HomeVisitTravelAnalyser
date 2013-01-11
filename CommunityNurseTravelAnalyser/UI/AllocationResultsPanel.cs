@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CommunityNurseTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Results;
 
-namespace CommunityNurseTravelAnalyser.UI
+namespace HomeVisitTravelAnalyser.UI
 {
     public partial class AllocationResultsPanel : UserControl
     {

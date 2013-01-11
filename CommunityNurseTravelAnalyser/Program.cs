@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 using Microsoft.VisualBasic.ApplicationServices;
 
-namespace CommunityNurseTravelAnalyser
+namespace HomeVisitTravelAnalyser
 {
     static class Program
     {

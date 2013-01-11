@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CommunityNurseTravelAnalyser.Results;
+using HomeVisitTravelAnalyser.Results;
 
 using Statistics.Comparisons.Parametric;
 
-namespace CommunityNurseTravelAnalyser.UI
+namespace HomeVisitTravelAnalyser.UI
 {
     public partial class MeanDifferenceConfidenceIntervalPanel : UserControl
     {

@@ -1,4 +1,4 @@
-﻿namespace CommunityNurseTravelAnalyser.UI
+﻿namespace HomeVisitTravelAnalyser.UI
 {
     partial class ResultsPanel
     {
@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.exportResultsToExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.meanDifferenceConfidenceIntervalPanel1 = new CommunityNurseTravelAnalyser.UI.MeanDifferenceConfidenceIntervalPanel();
-            this.allocationResultsPanel1 = new CommunityNurseTravelAnalyser.UI.AllocationResultsPanel();
-            this.comparisonByChartPanel1 = new CommunityNurseTravelAnalyser.UI.ComparisonByChartPanel();
-            this.resultsComparisonPanel1 = new CommunityNurseTravelAnalyser.UI.ResultsComparisonPanel();
+            this.meanDifferenceConfidenceIntervalPanel1 = new HomeVisitTravelAnalyser.UI.MeanDifferenceConfidenceIntervalPanel();
+            this.allocationResultsPanel1 = new HomeVisitTravelAnalyser.UI.AllocationResultsPanel();
+            this.comparisonByChartPanel1 = new HomeVisitTravelAnalyser.UI.ComparisonByChartPanel();
+            this.resultsComparisonPanel1 = new HomeVisitTravelAnalyser.UI.ResultsComparisonPanel();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             // 
             // exportResultsToExcelToolStripMenuItem
             // 
-            this.exportResultsToExcelToolStripMenuItem.Image = global::CommunityNurseTravelAnalyser.Properties.Resources.excel;
+            this.exportResultsToExcelToolStripMenuItem.Image = global::HomeVisitTravelAnalyser.Properties.Resources.excel;
             this.exportResultsToExcelToolStripMenuItem.Name = "exportResultsToExcelToolStripMenuItem";
             this.exportResultsToExcelToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.exportResultsToExcelToolStripMenuItem.Text = "Export results to Excel";

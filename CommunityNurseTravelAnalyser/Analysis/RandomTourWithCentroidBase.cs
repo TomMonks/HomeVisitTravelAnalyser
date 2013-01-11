@@ -8,7 +8,7 @@ using System.Data;
 using LocalSearch;
 using DistanceFunctions;
 
-namespace CommunityNurseTravelAnalyser.Analysis
+namespace HomeVisitTravelAnalyser.Analysis
 {
     public class RandomTourWithCentroidBase : IDataTableRowSampler
     {

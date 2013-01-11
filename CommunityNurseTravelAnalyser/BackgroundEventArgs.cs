@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommunityNurseTravelAnalyser
+namespace HomeVisitTravelAnalyser
 {
     public delegate void BackgroundEventHandler(object sender, BackgroundEventArgs args);
     

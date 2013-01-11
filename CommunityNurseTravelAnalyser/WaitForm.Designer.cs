@@ -1,4 +1,4 @@
-﻿namespace CommunityNurseTravelAnalyser
+﻿namespace HomeVisitTravelAnalyser
 {
     partial class WaitForm
     {

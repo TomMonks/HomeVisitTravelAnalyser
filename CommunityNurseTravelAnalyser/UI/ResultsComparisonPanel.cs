@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CommunityNurseTravelAnalyser.UI
+namespace HomeVisitTravelAnalyser.UI
 {
     public partial class ResultsComparisonPanel : UserControl
     {
