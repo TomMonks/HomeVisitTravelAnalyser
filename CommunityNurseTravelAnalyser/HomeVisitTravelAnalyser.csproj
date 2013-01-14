@@ -155,6 +155,9 @@
     <Compile Include="Analysis\RandomTourWithCentroidBase.cs" />
     <Compile Include="Analysis\TravelingSalesmanAnalyser.cs" />
     <Compile Include="BackgroundEventArgs.cs" />
+    <Compile Include="Query\UserQuerySettings.cs" />
+    <Compile Include="Serialization\ObjectToSerialize.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>

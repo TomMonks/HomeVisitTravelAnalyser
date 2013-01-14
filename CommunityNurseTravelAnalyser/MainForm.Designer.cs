@@ -120,10 +120,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.localityQuerySetupPanel1.AutoScroll = true;
             this.localityQuerySetupPanel1.FieldMappings = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("localityQuerySetupPanel1.FieldMappings")));
+            this.localityQuerySetupPanel1.FromDate = new System.DateTime(2011, 1, 1, 0, 0, 0, 0);
             this.localityQuerySetupPanel1.Location = new System.Drawing.Point(8, 6);
             this.localityQuerySetupPanel1.Name = "localityQuerySetupPanel1";
             this.localityQuerySetupPanel1.Size = new System.Drawing.Size(1014, 499);
             this.localityQuerySetupPanel1.TabIndex = 1;
+            this.localityQuerySetupPanel1.ToDate = new System.DateTime(2012, 8, 31, 0, 0, 0, 0);
             // 
             // tp_GPConfig
             // 
@@ -143,11 +145,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.localityQuerySetupPanel2.AutoScroll = true;
+            this.localityQuerySetupPanel2.DatabasePath = "C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\Database\\Communit" +
+    "yNurse.accdb";
             this.localityQuerySetupPanel2.FieldMappings = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("localityQuerySetupPanel2.FieldMappings")));
+            this.localityQuerySetupPanel2.FromDate = new System.DateTime(2011, 1, 1, 0, 0, 0, 0);
             this.localityQuerySetupPanel2.Location = new System.Drawing.Point(8, 6);
             this.localityQuerySetupPanel2.Name = "localityQuerySetupPanel2";
             this.localityQuerySetupPanel2.Size = new System.Drawing.Size(1014, 499);
+            this.localityQuerySetupPanel2.SourceTable = "CommunityNurseRecordsPlymouth";
             this.localityQuerySetupPanel2.TabIndex = 1;
+            this.localityQuerySetupPanel2.ToDate = new System.DateTime(2012, 8, 31, 0, 0, 0, 0);
             // 
             // imageList1
             // 
@@ -309,6 +316,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Home Visit Travel Analyser";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tp_AnalysisOptions.ResumeLayout(false);

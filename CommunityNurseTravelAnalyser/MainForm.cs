@@ -21,20 +21,28 @@ using HomeVisitTravelAnalyser.Results;
 using HomeVisitTravelAnalyser.Query;
 using HomeVisitTravelAnalyser.UI;
 using HomeVisitTravelAnalyser.Analysis;
+using HomeVisitTravelAnalyser.Serialization;
 
 namespace HomeVisitTravelAnalyser
 {
     public partial class MainForm : Form
     {
         protected List<ILocalityQuerySetup> setups;
+        
         protected List<LocalityResult> homeResults;
         protected List<LocalityResult> gpResults;
         protected TabPage tspResultsTab;
         protected TabPage centroidResultsTab;
         protected int resultsPagesOpen;
 
+        #region Constants
+
         protected const string RUNNING_CENTROID_MSG = "Please wait. Analysing by change in spread of postcodes";
         protected const string RUNNING_TSP_MSG = "Please wait. Analysing by change in nurse travel distance";
+
+        protected const string USER_SETTINGS_PATH = "usersettings.txt";
+
+        #endregion
 
         protected WaitForm waitForm = new WaitForm();
 
@@ -45,8 +53,36 @@ namespace HomeVisitTravelAnalyser
             InitializeComponent();
             resultsPagesOpen = 0;
 
+
+            if (System.IO.File.Exists(USER_SETTINGS_PATH))
+            {
+
+                DeserializeSettings();             
+            }
+
+        }
+
+        private void DeserializeSettings()
+        {
+
+            Serializer serializer = new Serializer();
+
+            try
+            {
+                ObjectToSerialize objectToSerialize = serializer.DeSerializeObject(USER_SETTINGS_PATH);
+
+                this.localityQuerySetupPanel1.Settings = (UserQuerySettings)objectToSerialize.Queries[0];
+                this.localityQuerySetupPanel2.Settings = (UserQuerySettings)objectToSerialize.Queries[1];
+            }
+            catch(System.Runtime.Serialization.SerializationException)
+            {
+
+                Console.WriteLine("There was an error reading the user settings file. \nDefault settings have been used instead.");
+
+            }
         }
                
+
         private void MainForm_Shown(object sender, EventArgs e)
         {
             var mappings = this.localityQuerySetupPanel2.FieldMappings;
@@ -538,6 +574,23 @@ namespace HomeVisitTravelAnalyser
 
         #endregion
 
+        #region User settings
 
+        /// <summary>
+        /// When the main form closes the settings data is serialised.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ObjectToSerialize objectToSerialize = new ObjectToSerialize();
+            objectToSerialize.Queries.Add(this.localityQuerySetupPanel1.Settings);
+            objectToSerialize.Queries.Add(this.localityQuerySetupPanel2.Settings);
+
+            Serializer serializer = new Serializer();
+            serializer.SerializeObject(USER_SETTINGS_PATH, objectToSerialize);
+        }
+
+        #endregion
     }
 }

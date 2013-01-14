@@ -11,23 +11,29 @@ namespace HomeVisitTravelAnalyser.Query
         /// <summary>
         /// The database path
         /// </summary>
-        string DatabasePath { get; }
+        string DatabasePath { get; set; }
 
         /// <summary>
         /// The source table to query
         /// </summary>
-        string SourceTable { get; }
+        string SourceTable { get; set; }
+
+
+        /// <summary>
+        /// The name of the date field in teh database.
+        /// </summary>
+        string DateFieldName { get; set; }
 
 
         /// <summary>
         /// Start date of query
         /// </summary>
-        DateTime FromDate { get; }
+        DateTime FromDate { get; set; }
 
         /// <summary>
         /// End date of query
         /// </summary>
-        DateTime ToDate { get; }
+        DateTime ToDate { get; set; }
 
         /// <summary>
         /// The fields selected
@@ -45,10 +51,6 @@ namespace HomeVisitTravelAnalyser.Query
         List<string> SelectedLocalities { get; }
 
 
-
-
- 
- 
 
     }
 }
