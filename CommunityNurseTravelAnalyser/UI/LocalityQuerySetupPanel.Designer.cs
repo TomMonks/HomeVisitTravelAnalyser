@@ -28,25 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Easting");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Northing");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Date");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Central/North East");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("North West");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Plympton");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Plymstock");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("South East");
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("South West");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem("Easting");
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem("Northing");
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Date");
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Central/North East");
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("North West");
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("Plympton/Plymstock");
+            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem("South East");
+            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem("South West");
+            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
             "Date",
             "Date"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
             "Locality",
             "Locality"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
             "Easting",
             "Easting"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem(new string[] {
             "Northing",
             "Northing"}, -1);
             this.label6 = new System.Windows.Forms.Label();
@@ -71,7 +70,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bt_file = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.hubQuerySetupPanel1 = new HomeVisitTravelAnalyser.UI.HubQuerySetupPanel();
             this.SuspendLayout();
             // 
             // label6
@@ -121,9 +120,9 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem25,
+            listViewItem26,
+            listViewItem27});
             this.listView1.Location = new System.Drawing.Point(162, 269);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(575, 112);
@@ -193,12 +192,11 @@
             this.lvw_Locality.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
             this.lvw_Locality.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8,
-            listViewItem9});
+            listViewItem28,
+            listViewItem29,
+            listViewItem30,
+            listViewItem31,
+            listViewItem32});
             this.lvw_Locality.Location = new System.Drawing.Point(162, 396);
             this.lvw_Locality.Name = "lvw_Locality";
             this.lvw_Locality.Size = new System.Drawing.Size(575, 144);
@@ -235,10 +233,10 @@
             this.columnHeader3,
             this.columnHeader4});
             this.lvw_mappings.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem10,
-            listViewItem11,
-            listViewItem12,
-            listViewItem13});
+            listViewItem33,
+            listViewItem34,
+            listViewItem35,
+            listViewItem36});
             this.lvw_mappings.Location = new System.Drawing.Point(162, 92);
             this.lvw_mappings.Name = "lvw_mappings";
             this.lvw_mappings.Size = new System.Drawing.Size(575, 109);
@@ -270,22 +268,19 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // hubQuerySetupPanel1
             // 
-            this.button1.Location = new System.Drawing.Point(33, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 22);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.hubQuerySetupPanel1.Location = new System.Drawing.Point(3, 554);
+            this.hubQuerySetupPanel1.Name = "hubQuerySetupPanel1";
+            this.hubQuerySetupPanel1.Size = new System.Drawing.Size(746, 178);
+            this.hubQuerySetupPanel1.TabIndex = 39;
             // 
             // LocalityQuerySetupPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.hubQuerySetupPanel1);
             this.Controls.Add(this.bt_file);
             this.Controls.Add(this.lvw_mappings);
             this.Controls.Add(this.label8);
@@ -304,7 +299,7 @@
             this.Controls.Add(this.dateFrom);
             this.Controls.Add(this.label3);
             this.Name = "LocalityQuerySetupPanel";
-            this.Size = new System.Drawing.Size(759, 552);
+            this.Size = new System.Drawing.Size(742, 682);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +329,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button bt_file;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button1;
+        private HubQuerySetupPanel hubQuerySetupPanel1;
     }
 }

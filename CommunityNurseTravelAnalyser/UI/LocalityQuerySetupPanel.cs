@@ -15,8 +15,8 @@ using HomeVisitTravelAnalyser.Query;
 
 namespace HomeVisitTravelAnalyser.UI
 {
-    [Serializable]
-    public partial class LocalityQuerySetupPanel : UserControl, ILocalityQuerySetup, ISerializable
+
+    public partial class LocalityQuerySetupPanel : UserControl, ILocalityQuerySetup
     {
 
         const string DB_PATH = "Path";
@@ -30,9 +30,6 @@ namespace HomeVisitTravelAnalyser.UI
         protected List<string> fields;
         protected Dictionary<string, string> mappings;
 
-        private string check;
-
-        public string Check { get { return check; } set { check = value; } }
 
         public LocalityQuerySetupPanel()
         {
@@ -65,25 +62,6 @@ namespace HomeVisitTravelAnalyser.UI
         }
 
 
-        /// <summary>
-        /// Overloaded constructor for deserialization of object
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="ctxt"></param>
-        public LocalityQuerySetupPanel(SerializationInfo info, StreamingContext ctxt)
-        {
-
-            InitializeComponent();
-            InitialiseQuerySetupGUI();
-
-            this.txtFile.Text = (string)info.GetValue(DB_PATH, typeof(string));
-            this.check = (string)info.GetValue(DB_PATH, typeof(string));
-            this.txtTable.Text = info.GetString(SOURCE_TABLE);
-            this.FromDate = info.GetDateTime(FROM_DATE);
-            this.ToDate = info.GetDateTime(TO_DATE);
-            
-            //not storing fields and localities a the moment.
-        }
 
 
         public UserQuerySettings Settings
@@ -103,10 +81,25 @@ namespace HomeVisitTravelAnalyser.UI
             set
             {
                 this.DatabasePath = value.DatabasePath;
+                this.hubQuerySetupPanel1.DatabasePath = value.DatabasePath;
                 this.SourceTable = value.SourceTable;
                 this.ToDate = value.ToDate;
                 this.FromDate = value.FromDate;
                 this.DateFieldName = value.DateFieldName;
+            }
+        }
+
+
+        public UserQuerySettings HubSettings
+        {
+            get
+            {
+                var settings = new UserQuerySettings();
+                settings.DatabasePath = this.DatabasePath;
+                settings.SourceTable = this.hubQuerySetupPanel1.SourceTable;
+                settings.SelectedFields = this.hubQuerySetupPanel1.SelectedFields;
+                
+                return settings;
             }
         }
 
@@ -147,6 +140,12 @@ namespace HomeVisitTravelAnalyser.UI
             {
               return fields;
             }
+            set
+            {
+                this.fields = value;
+
+
+            }
         }
 
 
@@ -184,6 +183,19 @@ namespace HomeVisitTravelAnalyser.UI
             }
         }
 
+        public string HubSourceTable
+        {
+            get { return this.hubQuerySetupPanel1.SourceTable; }
+            set { this.hubQuerySetupPanel1.SourceTable = value; }
+        }
+
+        public List<string> HubSelectedFields
+        {
+            get { return this.hubQuerySetupPanel1.SelectedFields; }
+            set { this.hubQuerySetupPanel1.SelectedFields = value; }
+        }
+
+
         private void bt_file_Click(object sender, EventArgs e)
         {
 
@@ -200,23 +212,9 @@ namespace HomeVisitTravelAnalyser.UI
 
 
 
-        /// <summary>
-        /// Handles serialization of object.  Only stores ILocalityQuerySetup properties
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="context"></param>
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue(DB_PATH, this.DatabasePath);
-            info.AddValue(SOURCE_TABLE, this.SourceTable);
-            info.AddValue(FROM_DATE, this.FromDate);
-            info.AddValue(TO_DATE, this.ToDate);
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(this.Check);
-        }
+
+ 
 
         
     }

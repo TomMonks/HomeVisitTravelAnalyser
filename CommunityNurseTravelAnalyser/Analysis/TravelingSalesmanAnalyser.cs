@@ -22,12 +22,17 @@ namespace HomeVisitTravelAnalyser.Analysis
         protected const double FIFTH_PERCENTILE = 0.05;
         protected const double NINETYFIFTH_PERCENTILE = 0.95;
         protected const int DECIMAL_PLACES = 1;
+        protected const string LOCALITY_IDENTIFER = "Locality";
 
         protected DataTableRandomRowSampler rnd;
         protected ILocalityQuerySetup querySetup;
         protected ITSPOptions options;
         protected List<LocalityResult> results;
         protected IDataTableRowSampler sampler;
+
+        protected ISamplePoolPrimer samplePrimer;
+
+        
 
         /// <summary>
         /// The locality results
@@ -54,16 +59,14 @@ namespace HomeVisitTravelAnalyser.Analysis
         {
 
             var initialCasesSampler = CreateRowSampler();
-
-            
-
+                        
             foreach (var locality in querySetup.SelectedLocalities)
             {
 
                 Console.WriteLine(string.Format("Analysing locality: {0}", locality));
                 
                 var data = GetData(locality);
-                initialCasesSampler.SetSamplePool(data);
+                samplePrimer.PrimeSamplePool(CreateSamplePoolArguments(locality, data));
 
                 var tourLengths = new List<double>();
 
@@ -85,6 +88,13 @@ namespace HomeVisitTravelAnalyser.Analysis
 
         }
 
+        private static SamplePoolPrimerArguments CreateSamplePoolArguments(string locality, DataTable data)
+        {
+            var args = new SamplePoolPrimerArguments() { Data = data };
+            args.StringArguments.Add(LOCALITY_IDENTIFER, locality);
+            return args;
+        }
+
 
         /// <summary>
         /// Querys the database
@@ -96,6 +106,24 @@ namespace HomeVisitTravelAnalyser.Analysis
             var db = new AccessDatabase(this.querySetup.DatabasePath);
 
             var factory = new VisitsByLocalityQuerySQLFactory(this.querySetup, locality);
+
+            var builder = new StandardQueryBuilder(factory);
+
+            var data = db.ExecuteQuery(builder.BuildSQL());
+
+            return data;
+        }
+
+
+        /// <summary>
+        /// Queries the database for all hub data
+        /// </summary>
+        /// <returns></returns>
+        private DataTable GetHubData()
+        {
+            var db = new AccessDatabase(this.querySetup.DatabasePath);
+
+            var factory = new LocalityHubsQuerySQLFactory(this.querySetup);
 
             var builder = new StandardQueryBuilder(factory);
 
@@ -122,14 +150,6 @@ namespace HomeVisitTravelAnalyser.Analysis
         /// <returns></returns>
         private ILocalSearchMethod CreateLocalSearchMethod(IObjectiveFunction objective, List<int> initialSolution)
         {
-            //if (this.options.OrdinaryDecent)
-            //{
-            //    return new OrdinaryDecent(objective, initialSolution);
-            //}
-            //else
-            //{
-            //    return new SteepestDecent(objective, initialSolution);
-            //}
 
             if (this.options.TourSearchMethod == SearchMethod.OrdinaryDecent)
             {
@@ -151,11 +171,29 @@ namespace HomeVisitTravelAnalyser.Analysis
         {
             if (options.TourBaseSetup == BaseSetup.LocalityCentroid)
             {
-                return new RandomTourWithCentroidBase(options.Seed, new EastingNorthingColumnIndexer(0, 1));
+                
+                var sampler = new RandomTourWithCentroidBase(this.options.Seed, new EastingNorthingColumnIndexer(0, 1));
+                samplePrimer = new StandardSamplePoolPrimer(sampler);
+
+                return sampler;
+                
+            }
+            else if (options.TourBaseSetup == BaseSetup.RandomWithinLocality)
+            {
+                var sampler = new RandomTourRandomBase(this.options.Seed);
+                samplePrimer = new StandardSamplePoolPrimer(sampler);
+                return sampler;
             }
             else
             {
-                return new RandomTourRandomBase(this.options.Seed);
+
+                var args = new RandomTourArguments(this.options.Seed) { Indexer = new EastingNorthingColumnIndexer(0, 1) };
+                args.DataSets.Add("hub", GetHubData());
+
+                var sampler = new RandomTourWithSpecifiedBase(args);
+                samplePrimer = new SamplePoolPrimerSpecifiedBase(sampler, GetHubData());
+                return sampler;
+              
             }
         }
 

@@ -5,7 +5,8 @@ namespace HomeVisitTravelAnalyser.Analysis
     public enum BaseSetup
     {
         LocalityCentroid = 0,
-        RandomWithinLocality = 1
+        RandomWithinLocality = 1,
+        SpecifiedLocalityHub = 2
     };
 
     public enum SearchMethod
@@ -17,7 +18,7 @@ namespace HomeVisitTravelAnalyser.Analysis
 
     public interface ITSPOptions
     {
-        bool OrdinaryDecent { get; }
+        
         int Sample { get; }
         int Seed { get; }
         int TourLength { get; }

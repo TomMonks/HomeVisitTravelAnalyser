@@ -38,7 +38,7 @@ namespace HomeVisitTravelAnalyser.Query
         /// <summary>
         /// The fields selected
         /// </summary>
-        List<string> SelectedFields {get;}
+        List<string> SelectedFields { get; set; }
 
         /// <summary>
         /// Select field mappings.
@@ -50,6 +50,16 @@ namespace HomeVisitTravelAnalyser.Query
         /// </summary>
         List<string> SelectedLocalities { get; }
 
+
+        /// <summary>
+        /// The table name containing hub locations
+        /// </summary>
+        string HubSourceTable { get; set; }
+
+        /// <summary>
+        /// The fields selected from the hub table
+        /// </summary>
+        List<string> HubSelectedFields { get; set; }
 
 
     }

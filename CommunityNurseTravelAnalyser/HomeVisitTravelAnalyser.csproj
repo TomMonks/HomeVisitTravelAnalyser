@@ -150,14 +150,21 @@
     <Compile Include="Analysis\AnalysisMethodSetup.cs" />
     <Compile Include="Analysis\CentroidAnalysisMethod.cs" />
     <Compile Include="Analysis\CentroidDailyAnalysisMethod.cs" />
+    <Compile Include="Analysis\SamplePoolPrimerWithHubs.cs" />
+    <Compile Include="Analysis\ISamplePoolPrimer.cs" />
+    <Compile Include="Analysis\RandomTourArguments.cs" />
+    <Compile Include="Analysis\RandomTourWithSpecifiedBase.cs" />
     <Compile Include="Analysis\IAnalysisCommand.cs" />
     <Compile Include="Analysis\RandomTourRandomBase.cs" />
     <Compile Include="Analysis\RandomTourWithCentroidBase.cs" />
+    <Compile Include="Analysis\StandardSamplePoolPrimer.cs" />
     <Compile Include="Analysis\TravelingSalesmanAnalyser.cs" />
     <Compile Include="BackgroundEventArgs.cs" />
+    <Compile Include="Query\LocalityHubsQuerySQLFactory.cs" />
     <Compile Include="Query\UserQuerySettings.cs" />
     <Compile Include="Serialization\ObjectToSerialize.cs" />
     <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Settings\UserTSPSettings.cs" />
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +188,12 @@
     <Compile Include="Analysis\AverageDailyDistanceCalculator.cs" />
     <Compile Include="DateRange.cs" />
     <Compile Include="Query\LocalityQuerySetup.cs" />
+    <Compile Include="UI\HubQuerySetupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\HubQuerySetupPanel.Designer.cs">
+      <DependentUpon>HubQuerySetupPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TextBoxStreamWriter.cs" />
     <Compile Include="UI\ComparisonByChartPanel.cs">
       <SubType>UserControl</SubType>
@@ -250,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ComparisonByChartPanel.resx">
       <DependentUpon>ComparisonByChartPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HubQuerySetupPanel.resx">
+      <DependentUpon>HubQuerySetupPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\LocalityQuerySetupPanel.resx">
       <DependentUpon>LocalityQuerySetupPanel.cs</DependentUpon>

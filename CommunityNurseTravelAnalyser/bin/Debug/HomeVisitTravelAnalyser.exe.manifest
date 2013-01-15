@@ -110,14 +110,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HomeVisitTravelAnalyser.exe" size="217600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HomeVisitTravelAnalyser.exe" size="224768">
       <assemblyIdentity name="HomeVisitTravelAnalyser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PG6srjBQrNnBIxDvcphXdk2bTYosrb3zE4c3IgFXW5g=</dsig:DigestValue>
+        <dsig:DigestValue>DZAS4OeRRbqOZ6yLjkVQ6Y5Ov8Q0xoqzSpNG0Xj1CIk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -129,7 +129,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TV54cKNwdDf2UisBETIEszIseM4ZXjWuWQKee9+o+l0=</dsig:DigestValue>
+        <dsig:DigestValue>1J+IpXh/kL95YfQKUqWEZFHENfqwwiqIGv7tOzSa/mQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

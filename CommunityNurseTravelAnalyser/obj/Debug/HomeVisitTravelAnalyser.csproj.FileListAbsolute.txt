@@ -36,3 +36,4 @@
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.application
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.exe
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.pdb
+\\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.UI.HubQuerySetupPanel.resources

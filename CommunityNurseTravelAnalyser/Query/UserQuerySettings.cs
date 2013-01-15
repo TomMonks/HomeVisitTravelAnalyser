@@ -22,7 +22,8 @@ namespace HomeVisitTravelAnalyser.Query
         const string DATE_FIELDNAME = "DateField";
 
 
-        public UserQuerySettings() { }
+
+        public UserQuerySettings() { this.fields = new List<string>();}
 
 
         /// <summary>
@@ -38,6 +39,7 @@ namespace HomeVisitTravelAnalyser.Query
             this.FromDate = info.GetDateTime(FROM_DATE);
             this.ToDate = info.GetDateTime(TO_DATE);
             this.DateFieldName = info.GetString(DATE_FIELDNAME);
+            this.fields = new List<string>();
             
             
             //not storing fields and localities a the moment.
@@ -47,6 +49,7 @@ namespace HomeVisitTravelAnalyser.Query
         protected List<string> localities;
         protected List<string> fields;
         protected Dictionary<string, string> mappings;
+                
 
         /// <summary>
         /// The database path
@@ -76,7 +79,7 @@ namespace HomeVisitTravelAnalyser.Query
         /// <summary>
         /// The fields selected
         /// </summary>
-        public List<string> SelectedFields { get { return new List<string>(); } }
+        public List<string> SelectedFields { get { return fields; } set { fields = value; } }
 
         /// <summary>
         /// Select field mappings.
@@ -87,7 +90,20 @@ namespace HomeVisitTravelAnalyser.Query
         /// The localities selected
         /// </summary>
         public List<string> SelectedLocalities { get { return new List<string>(); } }
- 
+
+
+        public string HubSourceTable
+        {
+            get;
+            set;
+        }
+
+        public List<string> HubSelectedFields
+        {
+            get;
+            set;
+        }
+
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
@@ -97,5 +113,8 @@ namespace HomeVisitTravelAnalyser.Query
             info.AddValue(TO_DATE, this.ToDate);
             info.AddValue(DATE_FIELDNAME, this.DateFieldName);
         }
+
+
+
     }
 }

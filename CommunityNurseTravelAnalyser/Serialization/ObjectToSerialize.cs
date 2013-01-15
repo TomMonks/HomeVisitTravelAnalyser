@@ -20,6 +20,7 @@ namespace HomeVisitTravelAnalyser.Serialization
     {
         List<UserQuerySettings> queries;
 
+
         public List<UserQuerySettings> Queries
         {
             get { return this.queries; }

@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_samples = new System.Windows.Forms.TextBox();
             this.grp_search = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.rd_steepestdecent = new System.Windows.Forms.RadioButton();
             this.rd_ordinarydecent = new System.Windows.Forms.RadioButton();
@@ -48,7 +49,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rd_centroidDay = new System.Windows.Forms.RadioButton();
             this.rd_centroidAll = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.grp_TSP.SuspendLayout();
             this.grp_baseOptions.SuspendLayout();
             this.grp_search.SuspendLayout();
@@ -99,6 +100,7 @@
             // 
             this.grp_baseOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grp_baseOptions.Controls.Add(this.radioButton2);
             this.grp_baseOptions.Controls.Add(this.rb_baseRandom);
             this.grp_baseOptions.Controls.Add(this.rb_baseCentroid);
             this.grp_baseOptions.Location = new System.Drawing.Point(265, 11);
@@ -179,6 +181,16 @@
             this.grp_search.TabIndex = 2;
             this.grp_search.TabStop = false;
             this.grp_search.Text = "Local Search Strategy";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(17, 79);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(143, 17);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.Text = "Brute Force (all solutions)";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // richTextBox1
             // 
@@ -275,15 +287,16 @@
             this.rd_centroidAll.Text = "Locality as a whole";
             this.rd_centroidAll.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButton2
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(17, 79);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(143, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.Text = "Brute Force (all solutions)";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(7, 67);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(87, 17);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Locality Hub ";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // AnalysisOptionPanel
             // 
@@ -334,5 +347,6 @@
         private System.Windows.Forms.RadioButton rb_baseRandom;
         private System.Windows.Forms.RadioButton rb_baseCentroid;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
