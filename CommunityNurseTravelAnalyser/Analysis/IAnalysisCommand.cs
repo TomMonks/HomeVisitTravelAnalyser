@@ -11,7 +11,8 @@ namespace HomeVisitTravelAnalyser.Analysis
     public interface IAnalysisCommand
     {
         
-        List<LocalityResult> Result { get; }
+        List<LocalityResult> ResultsByLocality { get; }
+        AllocationResult Results { get; }
         void Execute();
     }
 }

@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mean = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +58,8 @@
             this.Column3,
             this.Mean,
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -88,6 +93,9 @@
             // Mean
             // 
             this.Mean.DataPropertyName = "Mean";
+            dataGridViewCellStyle2.Format = "N1";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Mean.DefaultCellStyle = dataGridViewCellStyle2;
             this.Mean.HeaderText = "Mean";
             this.Mean.Name = "Mean";
             this.Mean.ReadOnly = true;
@@ -95,6 +103,8 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "LCI";
+            dataGridViewCellStyle3.Format = "N1";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column1.HeaderText = "LCI";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -102,9 +112,19 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "UCI";
+            dataGridViewCellStyle4.Format = "N1";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column2.HeaderText = "UCI";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Stats";
+            this.Column4.HeaderText = "Stats";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
             // 
             // MeanDifferenceConfidenceIntervalPanel
             // 
@@ -127,5 +147,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Mean;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

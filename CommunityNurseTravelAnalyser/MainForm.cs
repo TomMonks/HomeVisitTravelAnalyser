@@ -238,139 +238,139 @@ namespace HomeVisitTravelAnalyser
         #region Old single thread code for analysis
 
 
-        public void RunAnalysis()
-        {
-            if (this.analysisOptionPanel1.CentroidAnalysis)
-            {
-                if (this.analysisOptionPanel1.DailyCentroidMethod)
-                {
-                    DailyCentroidAnalysis();
-                }
-                else
-                {
-                    CentroidAnalysis();
-                }
-                Console.WriteLine("Centroid analysis complete");
-            }
+        //public void RunAnalysis()
+        //{
+        //    if (this.analysisOptionPanel1.CentroidAnalysis)
+        //    {
+        //        if (this.analysisOptionPanel1.DailyCentroidMethod)
+        //        {
+        //            DailyCentroidAnalysis();
+        //        }
+        //        else
+        //        {
+        //            CentroidAnalysis();
+        //        }
+        //        Console.WriteLine("Centroid analysis complete");
+        //    }
 
-            if (this.analysisOptionPanel1.DistanceAnalysis)
-            {
-                DistanceAnalysis();
-                Console.WriteLine("TSP analysis complete");
-            }
+        //    if (this.analysisOptionPanel1.DistanceAnalysis)
+        //    {
+        //        DistanceAnalysis();
+        //        Console.WriteLine("TSP analysis complete");
+        //    }
 
-            Console.WriteLine("All analysis is complete");
-            this.runAnalysisToolStripMenuItem.Enabled = true;
+        //    Console.WriteLine("All analysis is complete");
+        //    this.runAnalysisToolStripMenuItem.Enabled = true;
 
-        }
-
-
-        private void DistanceAnalysis()
-        {
-            int pass = 0;
-
-            foreach (var setup in this.setups)
-            {
-                pass++;
-                var patientResults = new List<LocalityResult>();
-
-                var salesman = new TravelingSalesmanAnalyser(setup, this.analysisOptionPanel1);
-
-                salesman.Execute();
-
-                if (pass == 1)
-                {
-
-                    this.homeResults = new List<LocalityResult>();
-                    salesman.Result.ForEach(x => homeResults.Add(x));
-
-                }
-                else
-                {
-
-                    this.gpResults = new List<LocalityResult>();
-                    salesman.Result.ForEach(x => gpResults.Add(x));
-                    var resultsPanel = new ResultsPanel();
-                    resultsPanel.SetResults(homeResults, gpResults, setup.SelectedLocalities);
-                    AddResultsPanel("TSPResults", "TSP Results", resultsPanel);
-                }
-            }
+        //}
 
 
-        }
+        //private void DistanceAnalysis()
+        //{
+        //    int pass = 0;
+
+        //    foreach (var setup in this.setups)
+        //    {
+        //        pass++;
+        //        var patientResults = new List<LocalityResult>();
+
+        //        var salesman = new TravelingSalesmanAnalyser(setup, this.analysisOptionPanel1);
+
+        //        salesman.Execute();
+
+        //        if (pass == 1)
+        //        {
+
+        //            this.homeResults = new List<LocalityResult>();
+        //            salesman.Result.ForEach(x => homeResults.Add(x));
+
+        //        }
+        //        else
+        //        {
+
+        //            this.gpResults = new List<LocalityResult>();
+        //            salesman.Result.ForEach(x => gpResults.Add(x));
+        //            var resultsPanel = new ResultsPanel();
+        //            resultsPanel.SetResults(homeResults, gpResults, setup.SelectedLocalities);
+        //            AddResultsPanel("TSPResults", "TSP Results", resultsPanel);
+        //        }
+        //    }
 
 
-        private void DailyCentroidAnalysis()
-        {
-            int pass = 0;
-
-            foreach (var setup in this.setups)
-            {
-                pass++;
-                var patientResults = new List<LocalityResult>();
-
-                var analyser = new CentroidDailyAnalysisMethod(setup);
-
-                analyser.Execute();
-
-                if (pass == 1)
-                {
-
-                    this.homeResults = new List<LocalityResult>();
-                    analyser.Result.ForEach(x => homeResults.Add(x));
-
-                }
-                else
-                {
-
-                    this.gpResults = new List<LocalityResult>();
-                    analyser.Result.ForEach(x => gpResults.Add(x));
-                    var resultsPanel = new ResultsPanel();
-                    resultsPanel.SetResults(homeResults, gpResults, setup.SelectedLocalities);
-                    AddResultsPanel("DailyCentroidAnalysis", "Centroid Analysis - Daily", resultsPanel);
-                }
-            }
+        //}
 
 
+        //private void DailyCentroidAnalysis()
+        //{
+        //    int pass = 0;
 
-        }
+        //    foreach (var setup in this.setups)
+        //    {
+        //        pass++;
+        //        var patientResults = new List<LocalityResult>();
 
-        private void CentroidAnalysis()
-        {
-            int pass = 0;
+        //        var analyser = new CentroidDailyAnalysisMethod(setup);
 
-            foreach (var setup in this.setups)
-            {
-                pass++;
-                var patientResults = new List<LocalityResult>();
+        //        analyser.Execute();
 
-                var analyser = new CentroidAnalysisMethod(setup);
+        //        if (pass == 1)
+        //        {
 
-                analyser.Execute();
+        //            this.homeResults = new List<LocalityResult>();
+        //            analyser.Result.ForEach(x => homeResults.Add(x));
 
-                if (pass == 1)
-                {
+        //        }
+        //        else
+        //        {
 
-                    this.homeResults = new List<LocalityResult>();
-                    analyser.Result.ForEach(x => homeResults.Add(x));
-
-                }
-                else
-                {
-
-                    this.gpResults = new List<LocalityResult>();
-                    analyser.Result.ForEach(x => gpResults.Add(x));
-
-                    var resultsPanel = new ResultsPanel();
-                    resultsPanel.SetResults(homeResults, gpResults, setup.SelectedLocalities);
-                    AddResultsPanel("CentroidAnalysis", "Centroid Analysis - All", resultsPanel);
-
-                }
-            }
+        //            this.gpResults = new List<LocalityResult>();
+        //            analyser.Result.ForEach(x => gpResults.Add(x));
+        //            var resultsPanel = new ResultsPanel();
+        //            resultsPanel.SetResults(homeResults, gpResults, setup.SelectedLocalities);
+        //            AddResultsPanel("DailyCentroidAnalysis", "Centroid Analysis - Daily", resultsPanel);
+        //        }
+        //    }
 
 
 
-        }
+        //}
+
+        //private void CentroidAnalysis()
+        //{
+        //    int pass = 0;
+
+        //    foreach (var setup in this.setups)
+        //    {
+        //        pass++;
+        //        var patientResults = new List<LocalityResult>();
+
+        //        var analyser = new CentroidAnalysisMethod(setup);
+
+        //        analyser.Execute();
+
+        //        if (pass == 1)
+        //        {
+
+        //            this.homeResults = new List<LocalityResult>();
+        //            analyser.Result.ForEach(x => homeResults.Add(x));
+
+        //        }
+        //        else
+        //        {
+
+        //            this.gpResults = new List<LocalityResult>();
+        //            analyser.Result.ForEach(x => gpResults.Add(x));
+
+        //            var resultsPanel = new ResultsPanel();
+        //            resultsPanel.SetResults(homeResults, gpResults, setup.SelectedLocalities);
+        //            AddResultsPanel("CentroidAnalysis", "Centroid Analysis - All", resultsPanel);
+
+        //        }
+        //    }
+
+
+
+        //}
 
 
 
@@ -399,13 +399,14 @@ namespace HomeVisitTravelAnalyser
                 if (pass == 1)
                 {
 
-                    analyser.Result.ForEach(x => results.Home.Add(x));
-
+                    analyser.ResultsByLocality.ForEach(x => results.HomeResultsByLocality.Add(x));
+                    results.HomeAllocation = analyser.Results;
                 }
                 else
                 {
 
-                    analyser.Result.ForEach(x => results.GP.Add(x));
+                    analyser.ResultsByLocality.ForEach(x => results.GPResultsByLocality.Add(x));
+                    results.GPAllocation = analyser.Results;
                 }
             }
 
@@ -433,13 +434,14 @@ namespace HomeVisitTravelAnalyser
                 if (pass == 1)
                 {
 
-                    analyser.Result.ForEach(x => results.Home.Add(x));
-
+                    analyser.ResultsByLocality.ForEach(x => results.HomeResultsByLocality.Add(x));
+                    results.HomeAllocation = analyser.Results;
                 }
                 else
                 {
 
-                    analyser.Result.ForEach(x => results.GP.Add(x));
+                    analyser.ResultsByLocality.ForEach(x => results.GPResultsByLocality.Add(x));
+                    results.GPAllocation = analyser.Results;
 
                 }
             }
@@ -472,19 +474,20 @@ namespace HomeVisitTravelAnalyser
                 if (pass == 1)
                 {
 
-                    salesman.Result.ForEach(x => results.Home.Add(x));
+                    salesman.ResultsByLocality.ForEach(x => results.HomeResultsByLocality.Add(x));
+                    results.HomeAllocation = salesman.Results;
 
                 }
                 else
                 {
 
-                    salesman.Result.ForEach(x => results.GP.Add(x));
+                    salesman.ResultsByLocality.ForEach(x => results.GPResultsByLocality.Add(x));
+                    results.GPAllocation = salesman.Results;
 
                 }
             }
 
             return results;
-
 
         }
 
@@ -547,7 +550,7 @@ namespace HomeVisitTravelAnalyser
             foreach (var result in results)
             {
                 var resultsPanel = new ResultsPanel();
-                resultsPanel.SetResults(result.Home, result.GP, setups[0].SelectedLocalities);
+                resultsPanel.SetResults(result, setups[0].SelectedLocalities);
                 AddResultsPanel(result.PageName, result.Name, resultsPanel);
             }
 

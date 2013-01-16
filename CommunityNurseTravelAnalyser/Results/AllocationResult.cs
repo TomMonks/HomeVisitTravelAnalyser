@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Statistics.Descriptive;
+
 namespace HomeVisitTravelAnalyser.Results
 {
 
@@ -15,6 +17,12 @@ namespace HomeVisitTravelAnalyser.Results
     public class AllocationResult
     {
         public string AllocationName { get; set; }
+
+
+        /// <summary>
+        /// Allocation statistics;
+        /// </summary>
+        public BasicStatistics Stats { get; set; }
 
         /// <summary>
         /// Overall mean distance in the allocation

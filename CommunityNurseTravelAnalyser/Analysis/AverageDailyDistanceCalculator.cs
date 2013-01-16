@@ -76,6 +76,12 @@ namespace HomeVisitTravelAnalyser.Analysis
         {
             DataTable data;
             data = GetData(day);
+
+            if (null == data)
+            {
+                return 0;
+            }
+
             var average = generator.AverageDistance(data, new EastingNorthingColumnIndexer(0, 1));
 
             Console.WriteLine(string.Format("average dist: {0}", average));

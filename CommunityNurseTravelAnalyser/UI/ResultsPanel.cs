@@ -33,11 +33,15 @@ namespace HomeVisitTravelAnalyser.UI
         public string ResultsDescription { get; set; }
 
         
-        public void SetResults(List<LocalityResult> home, List<LocalityResult> gp, List<string> selectedLocalities)
+        public void SetResults(ResultsContainer results, List<string> selectedLocalities)
         {
-            LoadChart(home, gp, selectedLocalities);
-            DisplayLocalityStatistics(home, gp);
-            DisplayHighLevelStatistics();
+
+            LoadChart(results.HomeResultsByLocality, results.GPResultsByLocality, selectedLocalities);
+            DisplayLocalityStatistics(results.HomeResultsByLocality, results.GPResultsByLocality);
+            DisplayHighLevelStatistics(results);
+
+            DisplayDifferences(results);
+
         }
 
         private void LoadChart(List<LocalityResult> home, List<LocalityResult> gp, List<string> selectedLocalities)
@@ -54,35 +58,30 @@ namespace HomeVisitTravelAnalyser.UI
             this.resultsComparisonPanel1.SetGPResults(gp);
         }
 
-        private void DisplayHighLevelStatistics()
+        private void DisplayHighLevelStatistics(ResultsContainer allResults)
         {
-            var allocationStats = new List<BasicStatistics>();
-            allocationStats.Add(new BasicStatistics(series1));
-            allocationStats.Add(new BasicStatistics(series2));
-
             List<AllocationResult> results = new List<AllocationResult>();
-            allocationStats.ForEach(x => results.Add(new AllocationResult() 
-            { 
-                Mean = Math.Round(x.Mean, DECIMAL_PLACES), 
-                LCI = Math.Round((new ConfidenceIntervalStandardNormal(x)).LowerBound, DECIMAL_PLACES), 
-                UCI = Math.Round((new ConfidenceIntervalStandardNormal(x)).UpperBound, DECIMAL_PLACES) 
-            }));
+            results.Add(allResults.HomeAllocation);
+            results.Add(allResults.GPAllocation);
 
             results[0].AllocationName = "Home Allocation";
             results[1].AllocationName = "GP Allocation";
+
             this.allocationResultsPanel1.SetResults(results);
 
-            DisplayDifferences(allocationStats, results);
+            
+
+
 
         }
 
-        private void DisplayDifferences(List<BasicStatistics> allocationStats, List<AllocationResult> results)
+        private void DisplayDifferences(ResultsContainer results)
         {
-           
-            var diffCI = new ConfidenceIntervalForMeanDifference(allocationStats[0], allocationStats[1]);
+
+            var diffCI = new ConfidenceIntervalForMeanDifference(results.HomeAllocation.Stats, results.GPAllocation.Stats);
             var differences = new List<AllocationResult>();
             differences.Add(new AllocationResult() { AllocationName = "Metres", Mean = diffCI.Mean, LCI = diffCI.LowerBound, UCI = diffCI.UpperBound });
-            differences.Add(new AllocationResult() { AllocationName = "%", Mean = (diffCI.Mean / results[0].Mean) * 100, LCI = (diffCI.LowerBound / results[0].LCI) * 100, UCI = (diffCI.UpperBound / results[0].UCI) * 100 });
+            differences.Add(new AllocationResult() { AllocationName = "%", Mean = (diffCI.Mean / results.HomeAllocation.Mean) * 100, LCI = (diffCI.LowerBound / results.HomeAllocation.Mean) * 100, UCI = (diffCI.UpperBound / results.HomeAllocation.Mean) * 100 });
 
             this.meanDifferenceConfidenceIntervalPanel1.SetResults(differences);
         }

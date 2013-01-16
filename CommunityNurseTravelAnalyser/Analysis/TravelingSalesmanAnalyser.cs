@@ -27,7 +27,9 @@ namespace HomeVisitTravelAnalyser.Analysis
         protected DataTableRandomRowSampler rnd;
         protected ILocalityQuerySetup querySetup;
         protected ITSPOptions options;
-        protected List<LocalityResult> results;
+        protected List<LocalityResult> resultsByLocality;
+        protected AllocationResult allocationResult;
+        protected List<double> allTourLengths;
         protected IDataTableRowSampler sampler;
 
         protected ISamplePoolPrimer samplePrimer;
@@ -37,11 +39,19 @@ namespace HomeVisitTravelAnalyser.Analysis
         /// <summary>
         /// The locality results
         /// </summary>
-        public List<LocalityResult> Result
+        public List<LocalityResult> ResultsByLocality
         {
             get
             {
-                return this.results;
+                return this.resultsByLocality;
+            }
+        }
+
+        public AllocationResult Results
+        {
+            get
+            {
+                return this.allocationResult;
             }
         }
 
@@ -50,7 +60,9 @@ namespace HomeVisitTravelAnalyser.Analysis
         {
             this.querySetup = querySetup;
             this.options = options;
-            this.results = new List<LocalityResult>();
+            this.resultsByLocality = new List<LocalityResult>();
+            this.allocationResult = new AllocationResult();
+            this.allTourLengths = new List<double>();
         }
 
 
@@ -68,25 +80,31 @@ namespace HomeVisitTravelAnalyser.Analysis
                 var data = GetData(locality);
                 samplePrimer.PrimeSamplePool(CreateSamplePoolArguments(locality, data));
 
-                var tourLengths = new List<double>();
+                var localityTourLengths = new List<double>();
 
                 for (int i = 1; i <= this.options.Sample; i++)
                 {
                     var initialCases = initialCasesSampler.SampleWithoutReplacement(options.TourLength);
 
-                    tourLengths.Add(Solve(CreateObjectiveFunction(initialCases), CreateInitialSolution()));
+                    localityTourLengths.Add(Solve(CreateObjectiveFunction(initialCases), CreateInitialSolution()));
 
-                    Console.WriteLine(string.Format("Tour length {0}: {1}", i, Math.Round(tourLengths[tourLengths.Count - 1], 1)));
+                    Console.WriteLine(string.Format("Tour length {0}: {1}", i, Math.Round(localityTourLengths[localityTourLengths.Count - 1], 1)));
                 }
 
-                RecordLocalityResults(locality, tourLengths);
+                RecordLocalityResults(locality, localityTourLengths);
+
+                localityTourLengths.ForEach(x => allTourLengths.Add(x));
 
                 data.Clear();
                 data = null;
 
             }
 
+            RecordAllocationResult();
+
         }
+
+        
 
         private static SamplePoolPrimerArguments CreateSamplePoolArguments(string locality, DataTable data)
         {
@@ -242,7 +260,22 @@ namespace HomeVisitTravelAnalyser.Analysis
                 NinetyFifthPercentile = Math.Round(stats.Percentile(NINETYFIFTH_PERCENTILE), DECIMAL_PLACES)
             };
 
-            results.Add(localityResult);
+            resultsByLocality.Add(localityResult);
+        }
+
+
+        private void RecordAllocationResult()
+        {
+            BasicStatistics stats = new BasicStatistics(this.allTourLengths);
+            var CI = new ConfidenceIntervalStandardNormal(stats);
+
+            this.allocationResult = new AllocationResult()
+            {
+                Mean = stats.Mean,
+                LCI = CI.LowerBound,
+                UCI = CI.UpperBound,
+                Stats = stats,
+            };
         }
     }
 }

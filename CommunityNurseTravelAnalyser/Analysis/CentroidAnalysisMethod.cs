@@ -20,7 +20,11 @@ namespace HomeVisitTravelAnalyser.Analysis
     public class CentroidAnalysisMethod : IAnalysisCommand 
     {
         protected ILocalityQuerySetup querySetup;
-        protected List<LocalityResult> results;
+        protected List<LocalityResult> resultsByLocality;
+
+
+        protected AllocationResult allocationResult;
+        protected List<double> allDistances;
 
         protected const double FIFTH_PERCENTILE = 0.05;
         protected const double NINETYFIFTH_PERCENTILE = 0.95;
@@ -29,12 +33,21 @@ namespace HomeVisitTravelAnalyser.Analysis
         public CentroidAnalysisMethod(ILocalityQuerySetup querySetup)
         {
             this.querySetup = querySetup;
-            this.results = new List<LocalityResult>();
+            this.resultsByLocality = new List<LocalityResult>();
+            this.allDistances = new List<double>();
         }
 
-        public List<Results.LocalityResult> Result
+        public List<Results.LocalityResult> ResultsByLocality
         {
-            get { return this.results; }
+            get { return this.resultsByLocality; }
+        }
+
+        public AllocationResult Results
+        {
+            get
+            {
+                return this.allocationResult;
+            }
         }
 
         public void Execute()
@@ -49,16 +62,21 @@ namespace HomeVisitTravelAnalyser.Analysis
                 var localityResults = gen.GetIndividualDistances(GetData(locality), new EastingNorthingColumnIndexer(0, 1));
 
                 RecordLocalityResults(locality, localityResults);
+
+                localityResults.ForEach(x => allDistances.Add(x));
                 
                 localityResults.Clear();
                 localityResults = null;
             }
+
+            RecordAllocationResult();
+
+
         }
 
         protected CentroidDistanceGenerator CreateDistanceCalculator()
         {
             return new CentroidDistanceGenerator(new PythagoreanCalculator());
-
         }
 
 
@@ -96,7 +114,22 @@ namespace HomeVisitTravelAnalyser.Analysis
                 NinetyFifthPercentile = Math.Round(stats.Percentile(NINETYFIFTH_PERCENTILE), DECIMAL_PLACES)
             };
 
-            results.Add(localityResult);
+            resultsByLocality.Add(localityResult);
+        }
+
+
+        private void RecordAllocationResult()
+        {
+            BasicStatistics stats = new BasicStatistics(this.allDistances);
+            var CI = new ConfidenceIntervalStandardNormal(stats);
+
+            this.allocationResult = new AllocationResult()
+            {
+                Mean = stats.Mean,
+                LCI = CI.LowerBound,
+                UCI = CI.UpperBound,
+                Stats = stats,
+            };
         }
     }
 }

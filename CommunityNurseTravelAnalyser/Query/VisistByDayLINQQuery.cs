@@ -23,12 +23,22 @@ namespace HomeVisitTravelAnalyser.Query
 
         public DataTable Execute()
         {
-                       
+
+            DataTable output;
+
             var results = from patients in this.data.AsEnumerable()
                           where patients.Field<DateTime>("Date") == this.Date
                           select patients;
-            
-            DataTable output = results.CopyToDataTable();
+
+            try
+            {
+                output = results.CopyToDataTable();
+            }
+            catch (InvalidOperationException)
+            {
+                Console.WriteLine("No data for {0}", this.Date);
+                output = null;
+            }
 
             return output;
             

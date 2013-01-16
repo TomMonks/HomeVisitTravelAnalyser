@@ -20,7 +20,11 @@ namespace HomeVisitTravelAnalyser.Analysis
     {
 
         protected ILocalityQuerySetup querySetup;
-        protected List<LocalityResult> results;
+        protected List<LocalityResult> resultsByLocality;
+
+        protected AllocationResult allocationResult;
+        protected List<double> allDistances;
+
 
         protected const double FIFTH_PERCENTILE = 0.05;
         protected const double NINETYFIFTH_PERCENTILE = 0.95;
@@ -29,18 +33,28 @@ namespace HomeVisitTravelAnalyser.Analysis
         /// <summary>
         /// The locality results
         /// </summary>
-        public List<LocalityResult> Result
+        public List<LocalityResult> ResultsByLocality
         {
             get
             {
-                return this.results;
+                return this.resultsByLocality;
+            }
+        }
+
+        public AllocationResult Results
+        {
+            get
+            {
+                return this.allocationResult;
             }
         }
 
         public CentroidDailyAnalysisMethod(ILocalityQuerySetup querySetup)
         {
             this.querySetup = querySetup;
-            this.results = new List<LocalityResult>();
+            this.resultsByLocality = new List<LocalityResult>();
+            this.allocationResult = new AllocationResult();
+            this.allDistances = new List<double>();
         }
 
         public void Execute()
@@ -49,18 +63,20 @@ namespace HomeVisitTravelAnalyser.Analysis
             foreach (var locality in querySetup.SelectedLocalities)
             {
                 
-
                 var calculator = CreateDistanceCalculator(locality);
 
                 Console.WriteLine(string.Format("Calcultating daily distance from centroid for {0}", locality));
                 List<double> distancesByDay = calculator.GetAverageDistances();
 
                 RecordLocalityResults(locality, distancesByDay);
+                distancesByDay.ForEach(x => { if (0 < x) { allDistances.Add(x); } });
 
                 distancesByDay.Clear();
                 distancesByDay = null;
 
             }
+
+            RecordAllocationResult();
             
         }
 
@@ -113,7 +129,22 @@ namespace HomeVisitTravelAnalyser.Analysis
                 NinetyFifthPercentile = Math.Round(stats.Percentile(NINETYFIFTH_PERCENTILE), DECIMAL_PLACES)
             };
 
-            results.Add(localityResult);
+            resultsByLocality.Add(localityResult);
+        }
+
+
+        private void RecordAllocationResult()
+        {
+            BasicStatistics stats = new BasicStatistics(this.allDistances);
+            var CI = new ConfidenceIntervalStandardNormal(stats);
+
+            this.allocationResult = new AllocationResult()
+            {
+                Mean = stats.Mean,
+                LCI = CI.LowerBound,
+                UCI = CI.UpperBound,
+                Stats = stats,
+            };
         }
 
     }
