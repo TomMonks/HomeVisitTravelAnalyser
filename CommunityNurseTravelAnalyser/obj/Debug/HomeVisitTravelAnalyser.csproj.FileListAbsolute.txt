@@ -22,6 +22,7 @@
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.UI.AllocationResultsPanel.resources
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.UI.AnalysisOptionPanel.resources
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.UI.ComparisonByChartPanel.resources
+\\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.UI.HubQuerySetupPanel.resources
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.UI.LocalityQuerySetupPanel.resources
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.MainForm.resources
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.Properties.Resources.resources
@@ -36,4 +37,3 @@
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.application
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.exe
 \\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.pdb
-\\isad.isadroot.ex.ac.uk\UOE\User\Visual Studio 2012\Projects\HomeVisitTravelAnalyser\CommunityNurseTravelAnalyser\obj\Debug\HomeVisitTravelAnalyser.UI.HubQuerySetupPanel.resources

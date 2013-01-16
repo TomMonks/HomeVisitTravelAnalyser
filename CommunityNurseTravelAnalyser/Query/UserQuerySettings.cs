@@ -20,7 +20,7 @@ namespace HomeVisitTravelAnalyser.Query
         const string FIELDS = "Fields";
         const string LOCALITIES = "Localities";
         const string DATE_FIELDNAME = "DateField";
-
+        const string RECENT_FILES = "RecentFiles";
 
 
         public UserQuerySettings() { this.fields = new List<string>();}
@@ -40,7 +40,8 @@ namespace HomeVisitTravelAnalyser.Query
             this.ToDate = info.GetDateTime(TO_DATE);
             this.DateFieldName = info.GetString(DATE_FIELDNAME);
             this.fields = new List<string>();
-            
+
+            this.recentFiles = (List<string>)info.GetValue(RECENT_FILES, typeof(List<string>));
             
             //not storing fields and localities a the moment.
         }
@@ -49,6 +50,7 @@ namespace HomeVisitTravelAnalyser.Query
         protected List<string> localities;
         protected List<string> fields;
         protected Dictionary<string, string> mappings;
+        protected List<string> recentFiles;
                 
 
         /// <summary>
@@ -92,6 +94,13 @@ namespace HomeVisitTravelAnalyser.Query
         public List<string> SelectedLocalities { get { return new List<string>(); } }
 
 
+        /// <summary>
+        /// Recent database files for the query settings.
+        /// </summary>
+        public List<string> RecentFiles { get { return this.recentFiles; } set { this.recentFiles = value; } }
+
+        
+
         public string HubSourceTable
         {
             get;
@@ -112,6 +121,8 @@ namespace HomeVisitTravelAnalyser.Query
             info.AddValue(FROM_DATE, this.FromDate);
             info.AddValue(TO_DATE, this.ToDate);
             info.AddValue(DATE_FIELDNAME, this.DateFieldName);
+            info.AddValue(RECENT_FILES, this.recentFiles);
+          
         }
 
 

@@ -26,9 +26,12 @@ namespace HomeVisitTravelAnalyser.UI
         const string FIELDS = "Fields";
         const string LOCALITIES = "Localities";
 
+        const int MAX_RECENT_FILES = 5;
+
         protected List<string> localities;
         protected List<string> fields;
         protected Dictionary<string, string> mappings;
+        protected List<string> recentFiles;
 
 
         public LocalityQuerySetupPanel()
@@ -43,6 +46,7 @@ namespace HomeVisitTravelAnalyser.UI
             localities = new List<string>();
             fields = new List<string>();
             mappings = new Dictionary<string, string>();
+            recentFiles = new List<string>();
 
             foreach (ListViewItem item in this.lvw_Locality.Items)
             {
@@ -75,6 +79,8 @@ namespace HomeVisitTravelAnalyser.UI
                 settings.FromDate = this.FromDate;
                 settings.DateFieldName = this.DateFieldName;
 
+                settings.RecentFiles = this.txtFile.RecentFiles;
+
                 return settings;
                 
             }
@@ -86,6 +92,7 @@ namespace HomeVisitTravelAnalyser.UI
                 this.ToDate = value.ToDate;
                 this.FromDate = value.FromDate;
                 this.DateFieldName = value.DateFieldName;
+                this.txtFile.RecentFiles = value.RecentFiles;
             }
         }
 
@@ -200,15 +207,24 @@ namespace HomeVisitTravelAnalyser.UI
         {
 
             this.openFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            this.openFileDialog1.DefaultExt = "Access Database | *.accdb";
+            this.openFileDialog1.Filter = "Access Database (*.accdb) | *.accdb";
+            this.openFileDialog1.FilterIndex = 1;
+            this.openFileDialog1.FileName = "";
 
             var result = this.openFileDialog1.ShowDialog();
 
             if (result == DialogResult.OK)
             {
                 this.txtFile.Text = this.openFileDialog1.FileName;
+                this.txtFile.AppendRecentFile(this.openFileDialog1.FileName);
             }
+
+            
+            
+          
         }
+
+      
 
 
 

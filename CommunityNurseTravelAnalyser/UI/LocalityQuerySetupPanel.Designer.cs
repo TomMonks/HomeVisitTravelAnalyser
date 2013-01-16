@@ -28,29 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem("Easting");
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem("Northing");
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Date");
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Central/North East");
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("North West");
-            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("Plympton/Plymstock");
-            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem("South East");
-            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem("South West");
-            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Easting");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Northing");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Date");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Central/North East");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("North West");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Plympton/Plymstock");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("South East");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("South West");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Date",
             "Date"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Locality",
             "Locality"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "Easting",
             "Easting"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Northing",
             "Northing"}, -1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalityQuerySetupPanel));
             this.label6 = new System.Windows.Forms.Label();
             this.txt_DateFieldName = new System.Windows.Forms.TextBox();
-            this.txtFile = new System.Windows.Forms.TextBox();
+            this.txtFile = new CustomGUI.RecentFileTextBox();
+            this.recentFilesMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.txtTable = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -97,6 +100,12 @@
             this.txtFile.Size = new System.Drawing.Size(548, 20);
             this.txtFile.TabIndex = 17;
             this.txtFile.Text = "C:\\Plymouth\\CommunityNurse.accdb";
+            
+            // 
+            // recentFilesMenuStrip
+            // 
+            this.recentFilesMenuStrip.Name = "lastMenuStrip";
+            this.recentFilesMenuStrip.Size = new System.Drawing.Size(61, 4);
             // 
             // label5
             // 
@@ -120,9 +129,9 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem25,
-            listViewItem26,
-            listViewItem27});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
             this.listView1.Location = new System.Drawing.Point(162, 269);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(575, 112);
@@ -192,11 +201,11 @@
             this.lvw_Locality.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2});
             this.lvw_Locality.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem28,
-            listViewItem29,
-            listViewItem30,
-            listViewItem31,
-            listViewItem32});
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.lvw_Locality.Location = new System.Drawing.Point(162, 396);
             this.lvw_Locality.Name = "lvw_Locality";
             this.lvw_Locality.Size = new System.Drawing.Size(575, 144);
@@ -233,10 +242,10 @@
             this.columnHeader3,
             this.columnHeader4});
             this.lvw_mappings.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem33,
-            listViewItem34,
-            listViewItem35,
-            listViewItem36});
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.lvw_mappings.Location = new System.Drawing.Point(162, 92);
             this.lvw_mappings.Name = "lvw_mappings";
             this.lvw_mappings.Size = new System.Drawing.Size(575, 109);
@@ -270,9 +279,12 @@
             // 
             // hubQuerySetupPanel1
             // 
+            this.hubQuerySetupPanel1.DatabasePath = null;
             this.hubQuerySetupPanel1.Location = new System.Drawing.Point(3, 554);
             this.hubQuerySetupPanel1.Name = "hubQuerySetupPanel1";
+            this.hubQuerySetupPanel1.SelectedFields = ((System.Collections.Generic.List<string>)(resources.GetObject("hubQuerySetupPanel1.SelectedFields")));
             this.hubQuerySetupPanel1.Size = new System.Drawing.Size(746, 178);
+            this.hubQuerySetupPanel1.SourceTable = "Hubs";
             this.hubQuerySetupPanel1.TabIndex = 39;
             // 
             // LocalityQuerySetupPanel
@@ -299,7 +311,7 @@
             this.Controls.Add(this.dateFrom);
             this.Controls.Add(this.label3);
             this.Name = "LocalityQuerySetupPanel";
-            this.Size = new System.Drawing.Size(742, 682);
+            this.Size = new System.Drawing.Size(657, 597);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +321,7 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_DateFieldName;
-        private System.Windows.Forms.TextBox txtFile;
+        private CustomGUI.RecentFileTextBox txtFile;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTable;
         private System.Windows.Forms.ListView listView1;
@@ -330,5 +342,6 @@
         private System.Windows.Forms.Button bt_file;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private HubQuerySetupPanel hubQuerySetupPanel1;
+        private System.Windows.Forms.ContextMenuStrip recentFilesMenuStrip;
     }
 }

@@ -62,14 +62,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CustomGUI.dll" size="7680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CustomGUI.dll" size="9728">
       <assemblyIdentity name="CustomGUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>65ppEEapqzH1NFvwKYRjAAunTzbCrh/8gt7X85qiiuc=</dsig:DigestValue>
+        <dsig:DigestValue>7nvz76LSGN24qZLVgIIjeo2TFPtH2IKNyuMEoCHji6I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,14 +110,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HomeVisitTravelAnalyser.exe" size="225280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HomeVisitTravelAnalyser.exe" size="226304">
       <assemblyIdentity name="HomeVisitTravelAnalyser" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qbSWNjIkhXe6mrMNAvLjEOK/HUiYx/PtlNNoDek8ebA=</dsig:DigestValue>
+        <dsig:DigestValue>//zXUn5qe/2sBOsY/B2syJoxZDnzVasa+ri6vXLszXY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
