@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("HomeVisitTravelAnalyser")]
-[assembly: AssemblyDescription("A modelling and analysis tool to support decision making about patient allocation to Community Nurse teams")]
+[assembly: AssemblyDescription("A modelling and analysis tool to support decision making about patient allocation to Healthcare home visit teams")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("PenCHORD")]
-[assembly: AssemblyProduct("Community Nurse Travel Analyser")]
-[assembly: AssemblyCopyright("Copyright PenCHORD ©  2012")]
+[assembly: AssemblyProduct("Home Visit Travel Analyser")]
+[assembly: AssemblyCopyright("Copyright PenCHORD ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
