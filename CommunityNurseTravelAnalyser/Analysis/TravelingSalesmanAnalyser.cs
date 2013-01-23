@@ -151,7 +151,11 @@ namespace HomeVisitTravelAnalyser.Analysis
         }
 
 
-
+        /// <summary>
+        /// For a tour of size n with the same start and end point creates a initial tour list in the form 0,1,2,3,4,5,...n, 0
+        /// Where 0 is the start and end point.
+        /// </summary>
+        /// <returns></returns>
         private List<int> CreateInitialSolution()
         {
             List<int> initialSolution = Enumerable.Range(0, options.TourLength + 1).ToList<int>();
