@@ -32,6 +32,7 @@
             this.chk_Distance = new System.Windows.Forms.CheckBox();
             this.grp_TSP = new System.Windows.Forms.GroupBox();
             this.grp_baseOptions = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.rb_baseRandom = new System.Windows.Forms.RadioButton();
             this.rb_baseCentroid = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rd_centroidDay = new System.Windows.Forms.RadioButton();
             this.rd_centroidAll = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.grp_TSP.SuspendLayout();
             this.grp_baseOptions.SuspendLayout();
             this.grp_search.SuspendLayout();
@@ -110,10 +110,21 @@
             this.grp_baseOptions.TabStop = false;
             this.grp_baseOptions.Text = "Base Options";
             // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(16, 67);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(87, 17);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Locality Hub ";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // rb_baseRandom
             // 
             this.rb_baseRandom.AutoSize = true;
-            this.rb_baseRandom.Location = new System.Drawing.Point(7, 43);
+            this.rb_baseRandom.Location = new System.Drawing.Point(16, 44);
             this.rb_baseRandom.Name = "rb_baseRandom";
             this.rb_baseRandom.Size = new System.Drawing.Size(130, 17);
             this.rb_baseRandom.TabIndex = 1;
@@ -124,7 +135,7 @@
             // 
             this.rb_baseCentroid.AutoSize = true;
             this.rb_baseCentroid.Checked = true;
-            this.rb_baseCentroid.Location = new System.Drawing.Point(7, 22);
+            this.rb_baseCentroid.Location = new System.Drawing.Point(16, 22);
             this.rb_baseCentroid.Name = "rb_baseCentroid";
             this.rb_baseCentroid.Size = new System.Drawing.Size(102, 17);
             this.rb_baseCentroid.TabIndex = 0;
@@ -164,7 +175,7 @@
             this.txt_samples.Name = "txt_samples";
             this.txt_samples.Size = new System.Drawing.Size(100, 20);
             this.txt_samples.TabIndex = 3;
-            this.txt_samples.Text = "10";
+            this.txt_samples.Text = "50";
             // 
             // grp_search
             // 
@@ -242,7 +253,7 @@
             this.txt_cities.Name = "txt_cities";
             this.txt_cities.Size = new System.Drawing.Size(100, 20);
             this.txt_cities.TabIndex = 0;
-            this.txt_cities.Text = "5";
+            this.txt_cities.Text = "8";
             // 
             // label2
             // 
@@ -286,17 +297,6 @@
             this.rd_centroidAll.TabStop = true;
             this.rd_centroidAll.Text = "Locality as a whole";
             this.rd_centroidAll.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 67);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(87, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Locality Hub ";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // AnalysisOptionPanel
             // 

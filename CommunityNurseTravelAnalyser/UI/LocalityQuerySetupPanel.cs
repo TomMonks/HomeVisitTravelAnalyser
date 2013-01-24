@@ -42,7 +42,7 @@ namespace HomeVisitTravelAnalyser.UI
 
         private void InitialiseQuerySetupGUI()
         {
-            this.txtFile.Text = AppDomain.CurrentDomain.BaseDirectory + "Database\\CommunityNurse.accdb";
+            this.txtFile.Text = AppDomain.CurrentDomain.BaseDirectory + "Database\\MentalHealth.accdb";
             localities = new List<string>();
             fields = new List<string>();
             mappings = new Dictionary<string, string>();
