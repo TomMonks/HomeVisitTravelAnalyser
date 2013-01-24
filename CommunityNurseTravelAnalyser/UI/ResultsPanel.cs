@@ -140,6 +140,10 @@ namespace HomeVisitTravelAnalyser.UI
         }
 
 
+
+        
+
+
         private void ExportResultsToExcel<T>(ExcelWorkBookAdaptor wbk, List<T> results, ExcelCellCoordinate coord)
         {
             var pipe = new ObjectPropertiesToExcelAdapter<T>(wbk[0], results);
@@ -158,8 +162,112 @@ namespace HomeVisitTravelAnalyser.UI
             return props.Count;
         }
 
-        
+        private void exportDetailedLocalityDataToExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
 
+        }
+
+        private void tabularFormatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportLocalityDetailToExcelTabular();
+        }
+
+
+        void ExportLocalityDetailToExcelTabular()
+        {
+            ExcelWorkBookAdaptor wbk = new ExcelWorkBookAdaptor();
+            wbk.NewBook();
+
+            ExportListResultsToExcel(wbk, 0, this.resultsComparisonPanel1.GetHomeResults());
+            ExportListResultsToExcel(wbk, 1, this.resultsComparisonPanel1.GetGPResults());
+
+            wbk[0].Name = "Home";
+            wbk[1].Name = "GP";
+
+
+            wbk.Show();
+        }
+
+        private void ExportListResultsToExcel(ExcelWorkBookAdaptor wbk, int sheetIndex, List<LocalityResult> results)
+        {
+            int column = 1;
+
+            foreach (var result in results)
+            {
+                var pipe = new ListToExcelTableAdaptor<double>(wbk[sheetIndex], result.Data);
+                pipe.Write(new ExcelCellCoordinate(1, column++), 1);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        void ExportLocalityDetailToExcelSPSS()
+        {
+            ExcelWorkBookAdaptor wbk = new ExcelWorkBookAdaptor();
+            wbk.NewBook();
+            wbk.Show();
+            int row = 1;
+
+            ExportListResultsToExcelSPSS(wbk, this.resultsComparisonPanel1.GetHomeResults(), 1, ref row);
+            ExportListResultsToExcelSPSS(wbk, this.resultsComparisonPanel1.GetGPResults(), 2, ref row);
+
+            wbk[0].Name = "Home";
+            wbk[1].Name = "GP";
+
+
+            wbk.Show();
+        }
+
+        private void ExportListResultsToExcelSPSS(ExcelWorkBookAdaptor wbk, List<LocalityResult> results, int policyIndex, ref int row)
+        {
+            
+            
+
+            int localityIndex = 1;
+
+            var policyIndexList = new List<int>();
+            Enumerable.Range(0, results[0].Data.Count).ToList().ForEach(x => policyIndexList.Add(policyIndex));
+            
+
+            foreach (var result in results)
+            {
+                var startRow = row;
+
+                var pipe = new ListToExcelTableAdaptor<double>(wbk[0], result.Data);
+                pipe.Write(new ExcelCellCoordinate(startRow, 1), 1);
+                
+                startRow = row;
+
+                var policyPipe = new ListToExcelTableAdaptor<int>(wbk[0], policyIndexList);
+                policyPipe.Write(new ExcelCellCoordinate(startRow, 2), 1);
+
+                startRow = row;
+
+                var localityIndexList = new List<int>();
+                Enumerable.Range(0, results[0].Data.Count).ToList().ForEach(x => localityIndexList.Add(localityIndex));
+                
+                var localityPipe = new ListToExcelTableAdaptor<int>(wbk[0], localityIndexList);
+                localityPipe.Write(new ExcelCellCoordinate(startRow, 3), 1);
+
+                row += result.Data.Count;
+                localityIndex++;
+            }
+
+            
+        }
+
+        private void exportInSTATASPSSFormatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportLocalityDetailToExcelSPSS();
+        }
 
 
     }

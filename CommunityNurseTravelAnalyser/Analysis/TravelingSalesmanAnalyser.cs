@@ -261,7 +261,8 @@ namespace HomeVisitTravelAnalyser.Analysis
                 LCI = Math.Round(CI.LowerBound, DECIMAL_PLACES),
                 UCI = Math.Round(CI.UpperBound, DECIMAL_PLACES),
                 FifthPercentile = Math.Round(stats.Percentile(FIFTH_PERCENTILE), DECIMAL_PLACES),
-                NinetyFifthPercentile = Math.Round(stats.Percentile(NINETYFIFTH_PERCENTILE), DECIMAL_PLACES)
+                NinetyFifthPercentile = Math.Round(stats.Percentile(NINETYFIFTH_PERCENTILE), DECIMAL_PLACES),
+                Data = tours
             };
 
             resultsByLocality.Add(localityResult);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalityQuerySetupPanel));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Easting");
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Northing");
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Date");
@@ -49,7 +50,6 @@
             System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Northing",
             "Northing"}, -1);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalityQuerySetupPanel));
             this.label6 = new System.Windows.Forms.Label();
             this.txt_DateFieldName = new System.Windows.Forms.TextBox();
             this.txtFile = new CustomGUI.RecentFileTextBox();
@@ -97,10 +97,10 @@
             // 
             this.txtFile.Location = new System.Drawing.Point(162, 14);
             this.txtFile.Name = "txtFile";
+            this.txtFile.RecentFiles = ((System.Collections.Generic.List<string>)(resources.GetObject("txtFile.RecentFiles")));
             this.txtFile.Size = new System.Drawing.Size(548, 20);
             this.txtFile.TabIndex = 17;
             this.txtFile.Text = "C:\\Plymouth\\CommunityNurse.accdb";
-            
             // 
             // recentFilesMenuStrip
             // 
@@ -122,7 +122,7 @@
             this.txtTable.Name = "txtTable";
             this.txtTable.Size = new System.Drawing.Size(575, 20);
             this.txtTable.TabIndex = 19;
-            this.txtTable.Text = "CommunityNurseRecordsPlymouth";
+            this.txtTable.Text = "HomeVisits";
             // 
             // listView1
             // 
@@ -311,7 +311,7 @@
             this.Controls.Add(this.dateFrom);
             this.Controls.Add(this.label3);
             this.Name = "LocalityQuerySetupPanel";
-            this.Size = new System.Drawing.Size(657, 597);
+            this.Size = new System.Drawing.Size(640, 580);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,21 +35,25 @@
             this.allocationResultsPanel1 = new HomeVisitTravelAnalyser.UI.AllocationResultsPanel();
             this.comparisonByChartPanel1 = new HomeVisitTravelAnalyser.UI.ComparisonByChartPanel();
             this.resultsComparisonPanel1 = new HomeVisitTravelAnalyser.UI.ResultsComparisonPanel();
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabularFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportInSTATASPSSFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportResultsToExcelToolStripMenuItem});
+            this.exportResultsToExcelToolStripMenuItem,
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(188, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(263, 70);
             // 
             // exportResultsToExcelToolStripMenuItem
             // 
             this.exportResultsToExcelToolStripMenuItem.Image = global::HomeVisitTravelAnalyser.Properties.Resources.excel;
             this.exportResultsToExcelToolStripMenuItem.Name = "exportResultsToExcelToolStripMenuItem";
-            this.exportResultsToExcelToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.exportResultsToExcelToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
             this.exportResultsToExcelToolStripMenuItem.Text = "Export results to Excel";
             this.exportResultsToExcelToolStripMenuItem.Click += new System.EventHandler(this.ExportResultsToExcelToolStripMenuItemClick);
             // 
@@ -80,8 +84,33 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.resultsComparisonPanel1.Location = new System.Drawing.Point(501, 3);
             this.resultsComparisonPanel1.Name = "resultsComparisonPanel1";
-            this.resultsComparisonPanel1.Size = new System.Drawing.Size(573, 532);
+            this.resultsComparisonPanel1.Size = new System.Drawing.Size(556, 532);
             this.resultsComparisonPanel1.TabIndex = 0;
+            // 
+            // exportDetailedLocalityDataToExcelToolStripMenuItem
+            // 
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tabularFormatToolStripMenuItem,
+            this.exportInSTATASPSSFormatToolStripMenuItem});
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem.Image = global::HomeVisitTravelAnalyser.Properties.Resources.excel;
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem.Name = "exportDetailedLocalityDataToExcelToolStripMenuItem";
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem.Text = "Export detailed locality data to Excel";
+            this.exportDetailedLocalityDataToExcelToolStripMenuItem.Click += new System.EventHandler(this.exportDetailedLocalityDataToExcelToolStripMenuItem_Click);
+            // 
+            // tabularFormatToolStripMenuItem
+            // 
+            this.tabularFormatToolStripMenuItem.Name = "tabularFormatToolStripMenuItem";
+            this.tabularFormatToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.tabularFormatToolStripMenuItem.Text = "Export in tabular format";
+            this.tabularFormatToolStripMenuItem.Click += new System.EventHandler(this.tabularFormatToolStripMenuItem_Click);
+            // 
+            // exportInSTATASPSSFormatToolStripMenuItem
+            // 
+            this.exportInSTATASPSSFormatToolStripMenuItem.Name = "exportInSTATASPSSFormatToolStripMenuItem";
+            this.exportInSTATASPSSFormatToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.exportInSTATASPSSFormatToolStripMenuItem.Text = "Export in STATA/SPSS format";
+            this.exportInSTATASPSSFormatToolStripMenuItem.Click += new System.EventHandler(this.exportInSTATASPSSFormatToolStripMenuItem_Click);
             // 
             // ResultsPanel
             // 
@@ -94,7 +123,7 @@
             this.Controls.Add(this.comparisonByChartPanel1);
             this.Controls.Add(this.resultsComparisonPanel1);
             this.Name = "ResultsPanel";
-            this.Size = new System.Drawing.Size(1077, 527);
+            this.Size = new System.Drawing.Size(1060, 527);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -108,6 +137,9 @@
         private ComparisonByChartPanel comparisonByChartPanel1;
         private AllocationResultsPanel allocationResultsPanel1;
         private MeanDifferenceConfidenceIntervalPanel meanDifferenceConfidenceIntervalPanel1;
+        private System.Windows.Forms.ToolStripMenuItem exportDetailedLocalityDataToExcelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tabularFormatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportInSTATASPSSFormatToolStripMenuItem;
 
     }
 }

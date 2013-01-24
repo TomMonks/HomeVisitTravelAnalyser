@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 using Statistics.Descriptive;
 
@@ -17,6 +18,7 @@ namespace HomeVisitTravelAnalyser.Results
         public double UCI { get; set; }
         public double FifthPercentile { get; set; }
         public double NinetyFifthPercentile { get; set; }
+        public List<double> Data { get; set; }
 
         public LocalityResult()
         {

@@ -145,14 +145,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.localityQuerySetupPanel2.AutoScroll = true;
-            this.localityQuerySetupPanel2.DatabasePath = "C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\Database\\Communit" +
-    "yNurse.accdb";
             this.localityQuerySetupPanel2.FieldMappings = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("localityQuerySetupPanel2.FieldMappings")));
             this.localityQuerySetupPanel2.FromDate = new System.DateTime(2011, 1, 1, 0, 0, 0, 0);
             this.localityQuerySetupPanel2.Location = new System.Drawing.Point(8, 6);
             this.localityQuerySetupPanel2.Name = "localityQuerySetupPanel2";
             this.localityQuerySetupPanel2.Size = new System.Drawing.Size(1014, 499);
-            this.localityQuerySetupPanel2.SourceTable = "CommunityNurseRecordsPlymouth";
             this.localityQuerySetupPanel2.TabIndex = 1;
             this.localityQuerySetupPanel2.ToDate = new System.DateTime(2012, 8, 31, 0, 0, 0, 0);
             // 
