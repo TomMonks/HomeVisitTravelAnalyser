@@ -213,7 +213,7 @@ namespace HomeVisitTravelAnalyser.UI
         {
             ExcelWorkBookAdaptor wbk = new ExcelWorkBookAdaptor();
             wbk.NewBook();
-            wbk.Show();
+           
             int row = 1;
 
             ExportListResultsToExcelSPSS(wbk, this.resultsComparisonPanel1.GetHomeResults(), 1, ref row);

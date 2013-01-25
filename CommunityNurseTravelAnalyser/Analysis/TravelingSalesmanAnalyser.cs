@@ -127,7 +127,18 @@ namespace HomeVisitTravelAnalyser.Analysis
 
             var builder = new StandardQueryBuilder(factory);
 
-            var data = db.ExecuteQuery(builder.BuildSQL());
+
+            DataTable data = null;
+
+            try
+            {
+
+                data = db.ExecuteQuery(builder.BuildSQL());
+            }
+            catch (System.Data.OleDb.OleDbException ex)
+            {
+                throw new ArgumentException("Cannot open database.  Please check that path is correct", ex);
+            }
 
             return data;
         }

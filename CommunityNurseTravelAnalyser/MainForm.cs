@@ -533,11 +533,21 @@ namespace HomeVisitTravelAnalyser
             {
                 this.backgroundWorker1.ReportProgress(0, RUNNING_TSP_MSG);
 
-                results.Add(DistanceAnalysis2());
-                Console.WriteLine("TSP analysis complete");
+                try
+                {
+                    results.Add(DistanceAnalysis2());
+
+
+                    Console.WriteLine("TSP analysis complete");
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Cannot complete TSP analysis");
+                }
             }
 
-            Console.WriteLine("All analysis is complete");
+            Console.WriteLine("All analysis routines are complete");
 
             e.Result = results;
 
